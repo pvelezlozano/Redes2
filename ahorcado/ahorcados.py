@@ -8,7 +8,6 @@ num_aleatorio=None
 #Creamos un socket
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 print("Socket Creado")
-header=10
 puerto = 5050
 servidor=socket.gethostbyname(socket.gethostname()) # DIRECCION IPv4 SERVER="192.168.1.85" , SERVER="localhost"
 direccion= (servidor,puerto)
@@ -25,7 +24,12 @@ def imprimirbienvenida():
     msg+="3. Dificil"
     return msg
 
-
+def resultado(res):
+    if res:
+        print(f"El usuario con direccion {address} gano")
+    else:
+        print(f"El usuario con direccion {address} perdio")
+    
 
 #Ciclo infinito esperando conexion
 while True:
@@ -35,6 +39,7 @@ while True:
     msg= imprimirbienvenida()
     c.send(bytes(msg,"utf-8"))
     while True:
+        #Decodificamos el mensaje y lo pasamos a string
         mensaje=c.recv(1024).decode("utf-8")
         if mensaje=="1":
             num_aleatorio= random.randint(0,len(PALFACIL)-1)
@@ -48,8 +53,13 @@ while True:
             num_aleatorio= random.randint(0,len(PALDIFICIL)-1)
             c.send(bytes(PALDIFICIL[num_aleatorio],"utf-8"))
             print("Se le ha enviado la palabra "+ PALDIFICIL[num_aleatorio])
-        elif mensaje=="Reinicio":
+        elif mensaje=="Salir":
+            print("El usuario actual dejo de jugar")
+            c.close()
             break
+        res=bool(c.recv(1024).decode("utf-8"))
+        resultado(res)
+        
 
 
 

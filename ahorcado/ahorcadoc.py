@@ -51,13 +51,13 @@ AHORCADO = ['''
      / \  |
           |
     =========''']
-header=10
 c=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 servidor=socket.gethostbyname(socket.gethostname())
 puerto = 5050
 direccion=(servidor,puerto)
 c.connect(direccion)
 bandera="1"
+gano_perdio=True
 bienvenida=c.recv(1024).decode("utf-8")
 while bandera=="1":
     print(bienvenida)
@@ -106,17 +106,20 @@ while bandera=="1":
             else:
                 print(f"Te equivocaste, la letra {letra} no esta en la palabra")
                 intentosfallidos=intentosfallidos+1
-            time.sleep(2)
         else:
             print(f"Ya me pusiste la letra {letra}, prueba con otra")
+        time.sleep(2)
     final=time.time()
     if (intentosfallidos==7):
         print("Lo siento, perdiste :(")
+        gano=False
     else:
         print(indicio)
         print("Felicidades! Ganaste")
+        gano=True
     print(f"Te tardaste {final-inicio} segundos")
+    c.send(bytes(str(gano),"utf-8"))
     bandera=input("Quieres jugar otro juego? Presiona 1 para seguir jugando, otra tecla para salir")
 
-c.send(bytes("Reinicio","utf-8"))
+c.send(bytes("Salir","utf-8"))
 c.close()
