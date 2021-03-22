@@ -25,7 +25,7 @@ def imprimirbienvenida():
     return msg
 
 def resultado(res):
-    if res:
+    if res==True:
         print(f"El usuario con direccion {address} gano")
     else:
         print(f"El usuario con direccion {address} perdio")
@@ -57,8 +57,9 @@ while True:
             print("El usuario actual dejo de jugar")
             c.close()
             break
-        res=bool(c.recv(1024).decode("utf-8"))
-        resultado(res)
+        res=c.recv(1024).decode("utf-8")
+        resultado(bool(res))
+s.close()
         
 
 
