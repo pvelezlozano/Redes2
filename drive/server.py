@@ -1,8 +1,6 @@
-from tkinter import *
 from os import system,listdir, path,getcwd, remove, rmdir
 import shutil
 import socket
-import random
 import pickle
 def nuevodir():
     global diractual
