@@ -1,0 +1,12 @@
+saltillo
+monterrey
+guadalajara
+cdmx
+hermosillo
+toluca
+puebla
+veracruz
+villahermosa
+culiacan
+lapaz
+mexicali

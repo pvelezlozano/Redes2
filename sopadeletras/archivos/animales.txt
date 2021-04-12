@@ -1,0 +1,6 @@
+jirafa
+conejo
+perro
+tortuga
+bisonte
+lagartija
