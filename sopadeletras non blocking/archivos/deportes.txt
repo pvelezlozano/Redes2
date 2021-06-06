@@ -1,0 +1,6 @@
+futbol
+basketbol
+americano
+cricket
+volleybol
+natacion

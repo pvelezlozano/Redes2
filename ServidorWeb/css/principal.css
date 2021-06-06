@@ -1,0 +1,168 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/*NAV TEXT*/
+header .nav-wrapper a {
+    text-decoration: none;
+}
+
+.brand-logo{
+    text-decoration: none;
+    font-family: OCR A Std, monospace;
+    font-size: 12px;
+}
+
+
+
+/*IMAGEN LOGO*/
+a img{ 
+    margin:auto;
+    height: 45px;
+    width:12%
+}
+
+/*NAV ENLACE*/
+.enla{
+    text-align: center;
+    text-decoration: none;
+}
+
+/*FOOTER REDES SOCIALES Y COMUNICACIÓN*/
+.social {
+	position: block; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+.social ul {
+		list-style: none;
+	}
+    
+.social ul li{
+    display:inline;
+    padding-left:3px;
+    padding-right:3px;
+}
+
+
+.social ul li a img{
+    display: inline-block;
+    padding-top: 10px;
+    height: auto;
+    width:20%
+    
+}
+
+.social ul li .icon-facebook img{
+	display: inline-block;
+    padding-top: 10px;
+    height: auto;
+    width:7.5%  
+}
+
+.social ul li .icon-ti img{
+    display: inline-block;
+    padding-top: 10px;
+    height: auto;
+    width:6.5%
+}
+
+.social ul li .icon-correo img{
+	display: inline-block;
+    padding-top: 10px;
+    height: auto;
+    width:6.5%   
+}
+
+/*DESPLEGABLE*/
+.panel-heading .panel-title{
+  background-color: #006064;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  border: .1px solid white;
+}
+
+.panel-heading h4{
+    text-align: center;
+}
+
+.panel-heading .panel-title i{
+    font-size: 30px;
+    
+}
+.panel-heading .panel-title:hover {/*Similar a active*/
+  background-color: #00b0ff;
+}
+
+
+.panel-heading .panel-body {
+  padding:20px;
+  padding-top: 8px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: OCR A Std, monospace;
+  font-size: 12px;
+}
+
+/*TARJETA DE INFORMACIÓN*/
+.card-image img{
+    opacity: 90%;
+}
+ 
+ .card-content .card-title{
+    font-size: 20px;
+}
+
+/*Migas de Pan*/
+ul.breadcrumb {
+  padding: 0px 0px;
+  list-style: none;
+  background-color: #fff;
+    position: relative;
+}
+ul.breadcrumb li {
+  display: inline-block;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 0px;
+  color: black;
+  content: ">\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+/*LOGIN*/
+main .container{
+    border: 2px solid #bdbdbd ;
+    padding: 16px;
+}
+form label{
+    text-align: left;
+}
+.mostrar{
+  display: inline;
+}
+

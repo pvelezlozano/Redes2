@@ -1,0 +1,13 @@
+pera
+manzana
+naranja
+aguacate
+arandano
+fresa
+pepino
+limon
+melon
+sandia
+kiwi
+papaya
+uva
