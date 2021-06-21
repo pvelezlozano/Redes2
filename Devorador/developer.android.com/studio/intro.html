@@ -1,0 +1,2939 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Android Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#3ddc84"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/android/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/css/app.css"><link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.com/studio/intro"><link rel="search" type="application/opensearchdescription+xml"
+            title="Android Developers" href="https://developer.android.com/s/opensearch.xml">
+      
+
+<title>Meet Android Studio &nbsp;|&nbsp; Android Developers</title>
+
+<meta property="og:title" content="Meet Android Studio &nbsp;|&nbsp; Android Developers"><meta name="description" content="Android Studio is the official Integrated Development Environment (IDE) for Android app development, based on IntelliJ IDEA.">
+  <meta property="og:description" content="Android Studio is the official Integrated Development Environment (IDE) for Android app development, based on IntelliJ IDEA."><meta property="og:url" content="https://developer.android.com/studio/intro"><meta property="og:image" content="https://developer.android.com/images/social/android-developers.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image">
+  
+
+  
+
+  
+
+  
+
+
+    </head>
+  <body class=""
+        template="page"
+        theme="android-theme"
+        type="article"
+        
+        layout="docs"
+        
+        
+        
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper"><devsite-header>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+
+  <img src="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/images/lockup.svg" class="devsite-site-logo"
+       alt="Android Developers">
+
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/about"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="platform"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Platform"
+   >
+  Platform
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  active>
+            <a href="https://developer.android.com/studio"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="androidStudio"
+   aria-label="Android Studio, selected" 
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Android Studio"
+   >
+  Android Studio
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/distribute"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="googlePlay"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Google Play"
+   >
+  Google Play
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/jetpack"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="jetpack"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Jetpack"
+   >
+  Jetpack
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/kotlin"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="kotlin"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Kotlin"
+   >
+  Kotlin
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/docs"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="docs"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Docs"
+   >
+  Docs
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/news"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="news"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: News"
+   >
+  News
+</a>
+
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    project-name="Android Developers"
+    tenant-name="Android Developers"
+    
+    
+    
+    
+    
+    role="combobox">
+  <form class="devsite-search-form" action="https://developer.android.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-haspopup="false"
+          aria-multiline="false"
+          aria-label="Search box"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        
+<devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    
+    <select aria-label="Select your language preference."
+            class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+    
+      
+      <option>Language</option>
+    
+    
+      <option value="en"
+              lang="en"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+    
+      <option value="id"
+              lang="id"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+    
+      <option value="es_419"
+              lang="es_419"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+    
+      <option value="pt_br"
+              lang="pt_br"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+    
+      <option value="zh_cn"
+              lang="zh_cn"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+    
+      <option value="ja"
+              lang="ja"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+    
+      <option value="ko"
+              lang="ko"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+    
+    </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          
+                        id="devsite-user"></devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.android.com/studio"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Android Studio
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/studio"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="download"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Download"
+   >
+  Download
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/studio/features"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="what&#39;sNew"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: What&#39;s new"
+   >
+  What&#39;s new
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  active>
+            <a href="https://developer.android.com/studio/intro"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="userGuide"
+   aria-label="User guide, selected" 
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: User guide"
+   >
+  User guide
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developer.android.com/studio/preview"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="preview"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Preview"
+   >
+  Preview
+</a>
+
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+
+  <img src="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/about"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Platform"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="platform">
+  
+    <span class="devsite-nav-text" tooltip >
+      Platform
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/studio"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android Studio"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="androidStudio">
+  
+    <span class="devsite-nav-text" tooltip >
+      Android Studio
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/studio"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Download"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="download">
+  
+    <span class="devsite-nav-text" tooltip >
+      Download
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/studio/features"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: What&#39;s new"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="what&#39;sNew">
+  
+    <span class="devsite-nav-text" tooltip >
+      What&#39;s new
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/studio/intro"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: User guide"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="userGuide">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      User guide
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/studio/preview"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Preview"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="preview">
+  
+    <span class="devsite-nav-text" tooltip >
+      Preview
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/distribute"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Play"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googlePlay">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Play
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/jetpack"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Jetpack"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="jetpack">
+  
+    <span class="devsite-nav-text" tooltip >
+      Jetpack
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/kotlin"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kotlin"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="kotlin">
+  
+    <span class="devsite-nav-text" tooltip >
+      Kotlin
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="docs">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/news"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: News"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="news">
+  
+    <span class="devsite-nav-text" tooltip >
+      News
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom" role="navigation">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Meet Android Studio</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/intro"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/install"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Install Android Studio</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/migrate"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Migrate to Android Studio</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/studio-config"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Configure the IDE</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/keyboard-shortcuts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Keyboard shortcuts</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/accessibility"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Accessibility features</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/update"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Update the IDE and tools</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item"><a href="/studio/workflow"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Workflow basics</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Manage your project</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/projects"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/create-project"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create a project</span></a></li><li class="devsite-nav-item"><a href="/guide/app-bundle/dynamic-delivery"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>About Play Feature Delivery</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Add C and C++ code</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/projects/add-native-code"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/install-ndk"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Install NDK and CMake</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/configure-agp-ndk"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Configure the NDK for AGP</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/configure-cmake"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Configure CMake</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/gradle-external-native-builds"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Link Gradle</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/studio/projects/android-library"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create an Android library</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/continuous-integration"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Set up continuous integration</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Write your app</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/write"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/templates"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Add code from a template</span></a></li><li class="devsite-nav-item"><a href="/studio/write/sample-code"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Find sample code</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/add-app-module"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Add a module for a new device</span></a></li><li class="devsite-nav-item"><a href="/studio/write/create-java-class"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create a Java class or type</span></a></li><li class="devsite-nav-item"><a href="/studio/write/java8-support"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use Java 8 language features</span></a></li><li class="devsite-nav-item"><a href="/studio/write/java8-support-table"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Java 8 language support table</span></a></li><li class="devsite-nav-item"><a href="/studio/write/add-resources"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Add app resources</span></a></li><li class="devsite-nav-item"><a href="/studio/write/layout-editor"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Build a UI with Layout Editor</span></a></li><li class="devsite-nav-item"><a href="/studio/write/motion-editor"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Build animation with Motion Editor</span></a></li><li class="devsite-nav-item"><a href="/studio/write/resource-manager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Manage your app&#39;s UI resources</span></a></li><li class="devsite-nav-item"><a href="/studio/write/theme-editor"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Design app themes</span></a></li><li class="devsite-nav-item"><a href="/studio/write/vector-asset-studio"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Add multi-density vector graphics</span></a></li><li class="devsite-nav-item"><a href="/studio/write/image-asset-studio"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create icons with Image Asset Studio</span></a></li><li class="devsite-nav-item"><a href="/studio/write/draw9patch"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create resizable bitmaps (9-Patch)</span></a></li><li class="devsite-nav-item"><a href="/studio/write/convert-webp"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create WebP images</span></a></li><li class="devsite-nav-item"><a href="/studio/write/translations-editor"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Localize the UI</span></a></li><li class="devsite-nav-item"><a href="/studio/write/app-link-indexing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Add Android app links</span></a></li><li class="devsite-nav-item"><a href="/studio/write/firebase"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Connect to Firebase</span></a></li><li class="devsite-nav-item"><a href="/studio/write/lint"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Improve your code with lint checks</span></a></li><li class="devsite-nav-item"><a href="/studio/write/annotations"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Improve code inspection with annotations</span></a></li><li class="devsite-nav-item"><a href="/studio/write/tool-attributes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Tools attributes reference</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Build and run your app</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/run"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Run apps on the emulator</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/run/emulator"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/run/managing-avds"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create and manage virtual devices</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-commandline"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Start the emulator from the command line</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-console"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Send emulator console commands</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-networking"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Set up emulator networking</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-acceleration"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Configure hardware acceleration</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-comparison"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Emulator feature comparison</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-troubleshooting"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Troubleshoot emulator</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Run apps on a hardware device</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/run/device"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/run/oem-usb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Install OEM USB drivers</span></a></li><li class="devsite-nav-item"><a href="/studio/run/win-usb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get the Google USB driver</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/studio/run/rundebugconfig"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create run/debug configurations</span></a></li><li class="devsite-nav-item"><a href="/studio/build/building-cmdline"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Build your app from the command line</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Configure your build</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/build"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/build/application-id"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Set the application ID</span></a></li><li class="devsite-nav-item"><a href="/studio/build/dependencies"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Add build dependencies</span></a></li><li class="devsite-nav-item"><a href="/studio/build/native-dependencies"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Using native dependencies</span></a></li><li class="devsite-nav-item"><a href="/studio/build/optimize-your-build"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Optimize your build speed</span></a></li><li class="devsite-nav-item"><a href="/studio/build/build-analyzer"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Troubleshoot build performance</span></a></li><li class="devsite-nav-item"><a href="/studio/build/profile-your-build"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Profile your build</span></a></li><li class="devsite-nav-item"><a href="/studio/build/build-variants"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Configure build variants</span></a></li><li class="devsite-nav-item"><a href="/studio/build/configure-apk-splits"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Build multiple APKs</span></a></li><li class="devsite-nav-item"><a href="/studio/build/manifest-merge"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Merge multiple manifests</span></a></li><li class="devsite-nav-item"><a href="/studio/build/manifest-build-variables"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Inject build variables into the manifest</span></a></li><li class="devsite-nav-item"><a href="/studio/build/shrink-code"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Shrink your app</span></a></li><li class="devsite-nav-item"><a href="/studio/build/multidex"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Enable multidex</span></a></li><li class="devsite-nav-item"><a href="/studio/build/apk-analyzer"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Inspect artifacts with APK Analyzer</span></a></li><li class="devsite-nav-item"><a href="/studio/build/maven-publish-plugin"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use the Maven Publish plugin</span></a></li><li class="devsite-nav-item"><a href="/studio/build/gradle-tips"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Gradle tips and recipes</span></a></li><li class="devsite-nav-item"><a href="/studio/build/migrate-to-kts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Migrate to KTS</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Debug your app</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/debug"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/dev-options"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Configure developer options</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/am-logcat"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Write and view logs</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/stacktraces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Analyze a stack trace</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/layout-inspector"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Debug your layout with Layout Inspector</span></a></li><li class="devsite-nav-item"><a href="/studio/inspect/database"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Debug your database with the Database Inspector</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/device-file-explorer"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>View on-device files</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/apk-debugger"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Debug pre-built APKs</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/am-screenshot"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Take a screenshot</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/am-video"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Record a video</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/bug-report"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Capture and read bug reports</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Test your app</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/test"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/test/command-line"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test from the command line</span></a></li><li class="devsite-nav-item"><a href="/studio/test/espresso-test-recorder"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create UI tests with Espresso Test Recorder</span></a></li><li class="devsite-nav-item"><a href="/studio/test/monkey"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>UI/App Exerciser Monkey</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>monkeyrunner reference</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/test/monkeyrunner"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/test/monkeyrunner/MonkeyDevice"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>MonkeyDevice</span></a></li><li class="devsite-nav-item"><a href="/studio/test/monkeyrunner/MonkeyImage"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>MonkeyImage</span></a></li><li class="devsite-nav-item"><a href="/studio/test/monkeyrunner/MonkeyRunner"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>MonkeyRunner</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Profile your app</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Android Studio profilers</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile/android-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Profile CPU activity</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile/cpu-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/generate-trace-logs"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Generate trace logs by instrumenting your app</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/studio/profile/memory-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Profile memory usage</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/network-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Profile network activity</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/energy-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Profile energy use</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/apk-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Profile with pre-built APKs</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Benchmark your app</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile/benchmarking-overview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Microbenchmark</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile/benchmark"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/build-benchmarks-without-gradle"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Build without Gradle</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Macrobenchmark</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile/macrobenchmark-intro"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/macrobenchmark"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Configure and run</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/studio/profile/run-benchmarks-in-ci"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Continuous Integration</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Measure performance</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile/measuring-performance"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/performance-measurement-examples"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Examples</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Publish your app</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/publish"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/publish/preparing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Prepare for release</span></a></li><li class="devsite-nav-item"><a href="/studio/publish/versioning"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Version your app</span></a></li><li class="devsite-nav-item"><a href="/studio/publish/app-signing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Sign your app</span></a></li><li class="devsite-nav-item"><a href="/studio/publish/upload-bundle"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Upload your app</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Command line tools</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/command-line"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/aapt2"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>aapt2</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/adb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>adb</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/apkanalyzer"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>apkanalyzer</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/apksigner"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>apksigner</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/avdmanager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>avdmanager</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/bmgr"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>bmgr</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/bundletool"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>bundletool</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/d8"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>d8</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/dmtracedump"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>dmtracedump</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/dumpsys"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>dumpsys</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/etc1tool"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>etc1tool</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/jobb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>jobb</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/jetifier"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>jetifier-standalone</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/logcat"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>logcat</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/mksdcard"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>mksdcard</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/retrace"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>retrace</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/sdkmanager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>sdkmanager</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/systrace"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>systrace</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/perfetto"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>perfetto</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/zipalign"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>zipalign</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/variables"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Environment variables</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item"><a href="/studio/troubleshoot"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Troubleshoot</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/studio/known-issues"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Known issues</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/studio/report-bugs"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Report a bug</span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav
+            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.android.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Android Developers"
+      
+    >
+    
+        Android Developers
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.android.com/studio"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Android Studio
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.android.com/studio/intro"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        User guide
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+       <template class="thumb-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples/Code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+       <template class="thumb-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+       
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+  
+    <h1 class="devsite-page-title">Meet Android Studio<devsite-bookmark></devsite-bookmark></h1>
+  
+
+  <devsite-toc class="devsite-nav" devsite-toc-embedded
+               >
+  </devsite-toc>
+
+  
+
+  <div class="devsite-article-body clearfix
+    ">
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Android Studio is the official Integrated Development Environment (IDE) for
+Android app development, based on
+<a class="external-link" href="https://www.jetbrains.com/idea/">IntelliJ IDEA
+</a>. On top of IntelliJ&#39;s powerful code editor and developer tools, Android
+Studio offers even more features that enhance your productivity when building
+Android apps, such as:</p>
+
+<ul>
+<li>A flexible Gradle-based build system</li>
+<li>A fast and feature-rich emulator</li>
+<li>A unified environment where you can develop for all Android devices</li>
+<li>Apply Changes to push code and resource changes to your running app without
+restarting your app</li>
+<li>Code templates and GitHub integration to help you build common app features
+and import sample code</li>
+<li>Extensive testing tools and frameworks</li>
+<li>Lint tools to catch performance, usability, version compatibility, and other
+problems</li>
+<li>C++ and NDK support</li>
+<li>Built-in support for
+<a href="https://cloud.google.com/tools/android-studio/docs/">Google Cloud Platform</a>,
+making it easy to integrate Google Cloud Messaging and App Engine</li>
+</ul>
+
+<p>This page provides an introduction to basic Android Studio features.
+For a summary of the latest changes, see
+<a href="/studio/releases">Android Studio release notes</a>.</p>
+
+<p><a name="project-structure"></a></p>
+
+<h2 id="project_structure" data-text="Project structure">Project structure</h2>
+
+<div class="attempt-right" style="width:298px">
+<img alt="" src="/studio/images/intro/project-android-view_2-1_2x.png" width="298" />
+<p class="img-caption"><strong>Figure 1.</strong> The project files in Android
+view.</p>
+</div>
+
+<p>Each project in Android Studio contains one or more modules with source code
+files and resource files. Types of modules include:</p>
+
+<ul>
+<li>Android app modules</li>
+<li>Library modules</li>
+<li>Google App Engine modules</li>
+</ul>
+
+<p>By default, Android Studio displays your project files in the Android project
+view, as shown in figure 1. This view is organized by modules to provide quick
+access to your project&#39;s key source files.</p>
+
+<p>All the build files are visible at the top level under <strong>Gradle Scripts</strong> and
+each app module contains the following folders:</p>
+
+<ul>
+<li><strong>manifests</strong>: Contains the <code translate="no" dir="ltr">AndroidManifest.xml</code> file.</li>
+<li><strong>java</strong>: Contains the Java source code files, including JUnit test code.</li>
+<li><strong>res</strong>: Contains all non-code resources, such as XML layouts, UI strings,
+and bitmap images.</li>
+</ul>
+
+<p>The Android project structure on disk differs from this flattened
+representation. To see the actual file structure of the project, select
+<strong>Project</strong> from the <strong>Project</strong> dropdown (in figure 1, it&#39;s showing as
+<strong>Android</strong>).</p>
+
+<p>You can also customize the view of the project files to focus on specific
+aspects of your app development. For example, selecting the <strong>Problems</strong> view of
+your project displays links to the source files containing any recognized
+coding and syntax errors, such as a missing XML element closing tag in a layout
+file.</p>
+
+<p><img alt="" src="/studio/images/intro/problems-view_2-1_2x.png" width="286" />
+<p class="img-caption"><strong>Figure 2.</strong> The project files in Problems
+view, showing a layout file with a problem.</p></p>
+
+<p>For more information, see <a href="/studio/projects">Projects overview</a>.</p>
+
+<p><a name="user-interface"></a></p>
+
+<h2 id="the_user_interface" data-text="The user interface">The user interface</h2>
+
+<p>The Android Studio main window is made up of several logical areas identified in
+figure 3.</p>
+
+<p><img src="/studio/images/intro/main-window_2-2_2x.png" width="816" alt=""
+id="main-window"/></p>
+
+<p class="img-caption">
+  <strong>Figure 3.</strong> The Android Studio main window.
+</p>
+
+<ol class="callouts">
+<li>The <b>toolbar</b> lets you carry out a wide range of actions, including
+  running your app and launching Android tools.</li>
+<li>The <b>navigation bar</b> helps you navigate through your project and open
+  files for editing. It provides a more compact view of the structure visible in
+  the <b>Project</b> window.</li>
+<li>The <b>editor window</b> is where you create and modify code. Depending on
+  the current file type, the editor can change. For example, when viewing a
+  layout file, the editor displays the Layout Editor.</li>
+<li>The <b>tool window bar</b> runs around the outside of the IDE window and
+  contains the buttons that allow you to expand or collapse individual tool
+  windows.</li>
+<li>The <b>tool windows</b> give you access to specific tasks like project management,
+  search, version control, and more. You can expand them and collapse them.</li>
+<li>The <b>status bar</b> displays the status of your project and the IDE itself,
+  as well as any warnings or messages.</li>
+</ol>
+
+<p>You can organize the main window to give yourself more screen space by hiding
+or moving toolbars and tool windows. You can also use keyboard shortcuts to
+access most IDE features.</p>
+
+<p>At any time, you can search across your source code, databases, actions,
+elements of the user interface, and so on, by double-pressing the Shift key, or
+clicking the magnifying glass in the upper right-hand corner of the Android
+Studio window. This can be very useful if, for example, you are trying to
+locate a particular IDE action that you have forgotten how to trigger.</p>
+
+<p><a name="tool-windows"></a></p>
+
+<h3 id="tool_windows" data-text="Tool windows">Tool windows</h3>
+
+<p>Instead of using preset perspectives, Android Studio follows your context and
+automatically brings up relevant tool windows as you work. By default, the most
+commonly used tool windows are pinned to the tool window bar at the edges of
+the application window.</p>
+
+<ul>
+<li>To expand or collapse a tool window, click the tool’s name in the tool
+window bar. You can also drag, pin, unpin, attach, and detach tool windows.</li>
+<li>To return to the current default tool window layout, click <strong>Window &gt;
+Restore Default Layout</strong> or customize your default layout by clicking
+<strong>Window &gt; Store Current Layout as Default</strong>.</li>
+<li>To show or hide the entire tool window bar, click the window icon
+<img src="/studio/images/intro/window-icon_2-1_2x.png" alt=""
+class="inline-icon"> in the bottom left-hand corner of the Android Studio
+window.</li>
+<li>To locate a specific tool window, hover over the window icon and select the
+tool window from the menu.</li>
+</ul>
+
+<p>You can also use keyboard shortcuts to open tool windows. Table 1 lists the
+shortcuts for the most common windows.</p>
+
+<p class="table-caption" id="tool-window-shortcuts">
+  <strong>Table 1.</strong> Keyboard shortcuts for some useful tool windows.
+</p>
+
+<table>
+ <tr>
+    <th>Tool window</th>
+    <th>Windows and Linux</th>
+    <th>Mac</th>
+ </tr>
+ <tr>
+    <td>Project</td>
+    <td><strong>Alt+1</strong></td>
+    <td><strong>Command+1</strong></td>
+ </tr>
+ <tr>
+    <td>Version Control</td>
+    <td><strong>Alt+9</strong></td>
+    <td><strong>Command+9</strong></td>
+ </tr>
+ <tr>
+    <td>Run</td>
+    <td><strong>Shift+F10</strong></td>
+    <td><strong>Control+R</strong></td>
+ </tr>
+ <tr>
+    <td>Debug</td>
+    <td><strong>Shift+F9</strong></td>
+    <td><strong>Control+D</strong></td>
+ </tr>
+ <tr>
+    <td>Logcat</td>
+    <td><strong>Alt+6</strong></td>
+    <td><strong>Command+6</strong></td>
+ </tr>
+ <tr>
+    <td>Return to Editor</td>
+    <td><strong>Esc</strong></td>
+    <td><strong>Esc</strong></td>
+ </tr>
+ <tr>
+    <td>Hide All Tool Windows</td>
+    <td><strong>Control+Shift+F12</strong></td>
+    <td><strong>Command+Shift+F12</strong></td>
+ </tr>
+</table>
+
+<p>If you want to hide all toolbars, tool windows, and editor tabs, click
+<strong>View &gt; Enter Distraction Free Mode</strong>. This enables
+<em>Distraction Free Mode</em>. To exit Distraction Free Mode, click
+<strong>View &gt; Exit Distraction Free Mode</strong>.</p>
+
+<p>You can use <em>Speed Search</em> to search and filter within most tool windows
+in Android Studio. To use Speed Search, select the tool window and then type
+your search query.</p>
+
+<p>For more tips, see <a href="/studio/intro/keyboard-shortcuts">Keyboard shortcuts</a>.</p>
+
+<p><a name="code-completion"></a></p>
+
+<h3 id="code_completion" data-text="Code completion">Code completion</h3>
+
+<p>Android Studio has three types of code completion, which you can access using
+keyboard shortcuts.</p>
+
+<p class="table-caption" id="code-completion-shortcuts">
+  <strong>Table 2.</strong> Keyboard shortcuts for code completion.
+</p>
+
+<table>
+ <tr>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Windows and Linux</th>
+    <th>Mac</th>
+ </tr>
+ <tr>
+    <td>Basic Completion</td>
+    <td>Displays basic suggestions for variables, types, methods, expressions,
+    and so on. If you call basic completion twice in a row, you see more
+    results, including private members and non-imported static members.</td>
+    <td><strong>Control+Space</strong></td>
+    <td><strong>Control+Space</strong></td>
+ </tr>
+ <tr>
+    <td>Smart Completion</td>
+    <td>Displays relevant options based on the context. Smart completion is
+    aware of the expected type and data flows. If you call Smart Completion
+    twice in a row, you see more results, including chains.</td>
+    <td><strong>Control+Shift+Space</strong></td>
+    <td><strong>Control+Shift+Space</strong></td>
+ </tr>
+ <tr>
+    <td>Statement Completion</td>
+    <td>Completes the current statement for you, adding missing parentheses,
+    brackets, braces, formatting, etc.</td>
+    <td><strong>Control+Shift+Enter</strong></td>
+    <td><strong>Shift+Command+Enter</strong></td>
+ </tr>
+</table>
+
+<p>You can also perform quick fixes and show intention actions by pressing
+<strong>Alt+Enter</strong>.</p>
+
+<p><a name="sample-code"></a></p>
+
+<h3 id="find_sample_code" data-text="Find sample code">Find sample code</h3>
+
+<p>The Code Sample Browser in Android Studio helps you find high-quality,
+Google-provided Android code samples based on the currently highlighted symbol
+in your project. For more information, see
+<a href="/studio/write/sample-code">Find sample code</a>.</p>
+
+<p><a name="navigation"></a></p>
+
+<h3 id="navigation" data-text="Navigation">Navigation</h3>
+
+<p>Here are some tips to help you move around Android Studio.</p>
+
+<ul>
+<li>Switch between your recently accessed files using the <em>Recent Files</em>
+action. Press <strong>Control+E</strong> (<strong>Command+E</strong> on a Mac) to bring up the Recent
+Files action. By default, the last accessed file is selected. You can also
+access any tool window through the left column in this action.</li>
+<li>View the structure of the current file using the <em>File Structure</em> action.
+Bring up the File Structure action by pressing <strong>Control+F12</strong>
+(<strong>Command+F12</strong> on a Mac). Using this action, you can quickly navigate to any
+part of your current file.</li>
+<li>Search for and navigate to a specific class in your project using the
+<em>Navigate to Class</em> action. Bring up the action by pressing <strong>Control+N</strong>
+(<strong>Command+O</strong> on a Mac). Navigate to Class supports sophisticated
+expressions, including camel humps, paths, line navigate to, middle name
+matching, and many more. If you call it twice in a row, it shows you the
+results out of the project
+classes.</li>
+<li>Navigate to a file or folder using the <em>Navigate to File</em> action. Bring up
+the Navigate to File action by pressing <strong>Control+Shift+N</strong>
+(<strong>Command+Shift+O</strong> on a Mac). To search for folders rather than files, add a
+/ at the end of your expression.</li>
+<li>Navigate to a method or field by name using the <em>Navigate to Symbol</em> action.
+Bring up the Navigate to Symbol action by pressing <strong>Control+Shift+Alt+N</strong>
+(<strong>Command+Option+O</strong> on a Mac).</li>
+<li>Find all the pieces of code referencing the class, method, field, parameter,
+or statement at the current cursor position by pressing <strong>Alt+F7</strong> (<strong>Option+F7</strong> on a Mac).</li>
+</ul>
+
+<p><a name="style-formatting"></a></p>
+
+<h3 id="style_and_formatting" data-text="Style and formatting">Style and formatting</h3>
+
+<p>As you edit, Android Studio automatically applies formatting and styles as
+specified in your code style settings. You can customize the code style
+settings by programming language, including specifying conventions for tabs and
+indents, spaces, wrapping and braces, and blank lines. To customize your code
+style settings, click <strong>File &gt; Settings &gt; Editor &gt; Code Style</strong> (<strong>Android
+Studio &gt; Preferences &gt; Editor &gt; Code Style</strong> on a Mac.)</p>
+
+<p>Although the IDE automatically applies formatting as you work, you can also
+explicitly call the <em>Reformat Code</em> action by pressing <strong>Control+Alt+L</strong>
+(<strong>Opt+Command+L</strong> on a Mac), or auto-indent all lines by pressing
+<strong>Control+Alt+I</strong> (<strong>Control+Option+I</strong> on a Mac).</p>
+
+<p><img src="/studio/images/intro/code-before-formatting_2-1_2x.png" width="493" alt=""
+id="code-before"/></p>
+
+<p class="img-caption">
+  <strong>Figure 4.</strong> Code before formatting.
+</p>
+
+<p><img src="/studio/images/intro/code-after-formatting_2-1_2x.png" width="493" alt=""
+id="code-after"/></p>
+
+<p class="img-caption">
+  <strong>Figure 5.</strong> Code after formatting.
+</p>
+
+<p><a name="version-control"></a></p>
+
+<h3 id="version_control_basics" data-text="Version control basics">Version control basics</h3>
+
+<p>Android Studio supports a variety of version control systems (VCS’s), including
+Git, GitHub, CVS, Mercurial, Subversion, and Google Cloud Source Repositories.</p>
+
+<p>After importing your app into Android Studio, use the Android Studio VCS menu
+options to enable VCS support for the desired version control system, create a
+repository, import the new files into version control, and perform other
+version control operations:</p>
+
+<ol>
+<li>From the Android Studio <strong>VCS</strong> menu, click <strong>Enable Version Control
+Integration</strong>.</li>
+<li>From the drop-down menu, select a version control system to associate with
+the project root, and then click <strong>OK</strong>.</li>
+</ol>
+
+<p>The VCS menu now displays a number of version control options based on the
+system you selected.</p>
+
+<p class="note"><strong>Note:</strong> You can also use the <strong>File >
+Settings > Version Control</strong> menu option to set up and modify the version
+control settings.</p>
+
+<p><a name="build-system"></a></p>
+
+<h2 id="gradle_build_system" data-text="Gradle build system">Gradle build system</h2>
+
+<p>Android Studio uses Gradle as the foundation of the build system, with more
+Android-specific capabilities provided by the
+<a href="/studio/releases/gradle-plugin">Android plugin for Gradle</a>. This build
+system runs as an integrated tool from the Android Studio menu, and
+independently from the command line. You can use the features of the build
+system to do the following:</p>
+
+<ul>
+<li>Customize, configure, and extend the build process.</li>
+<li>Create multiple APKs for your app, with different features using the same
+project and modules.</li>
+<li>Reuse code and resources across sourcesets.</li>
+</ul>
+
+<p>By employing the flexibility of Gradle, you can achieve all of this without
+modifying your app&#39;s core source files. Android Studio build files are named
+<code translate="no" dir="ltr">build.gradle</code>. They are plain text files that use <a class="external-link"
+href="http://groovy-lang.org">Groovy</a> syntax to configure the build with
+elements provided by the Android plugin for Gradle. Each project has one
+top-level build file for the entire project and separate module-level build
+files for each module. When you import an existing project, Android Studio
+automatically generates the necessary build files.</p>
+
+<p>To learn more about the build system and how to configure, see
+<a href="/studio/build">Configure your build</a>.</p>
+
+<p><a name="build-variants"></a></p>
+
+<h3 id="build_variants" data-text="Build variants">Build variants</h3>
+
+<p>The build system can help you create different versions of the same application
+from a single project. This is useful when you have both a free version and a
+paid version of your app, or if you want to distribute multiple APKs for
+different device configurations on Google Play.</p>
+
+<p>For more information about configuring build variants, see
+<a href="/studio/build/build-variants">Configure build variants</a>.</p>
+
+<p><a name="apk-splits"></a></p>
+
+<h3 id="multiple_apk_support" data-text="Multiple APK support">Multiple APK support</h3>
+
+<p>Multiple APK support allows you to efficiently create multiple APKs based on screen density or
+ABI. For example, you can create separate APKs of an app for the hdpi and mdpi screen densities,
+while still considering them a single variant and allowing them to
+share test APK, javac, dx, and ProGuard settings.</p>
+
+<p>For more information about multiple APK support, read
+<a href="/studio/build/configure-apk-splits">Build multiple APKs</a>.</p>
+
+<p><a name="resource-shrinking"></a></p>
+
+<h3 id="resource_shrinking" data-text="Resource shrinking">Resource shrinking</h3>
+
+<p>Resource shrinking in Android Studio automatically removes unused resources
+from your packaged app and library dependencies. For example, if your
+application is using <a href="https://developers.google.com/android/guides/overview">Google Play services</a>
+to access Google Drive functionality, and you are not currently using
+<a href="/training/sign-in">Google Sign-In</a>, then resource shrinking can
+remove the various drawable assets for the<code translate="no" dir="ltr">SignInButton</code> buttons.</p>
+
+<p class="note"><strong>Note:</strong> Resource shrinking works in conjunction
+with code shrinking tools, such as ProGuard.</p>
+
+<p>For more information on shrinking code and resources, see
+<a href="/studio/build/shrink-code">Shrink your code and resources</a>.</p>
+
+<p><a name="dependencies"></a></p>
+
+<h3 id="managing_dependencies" data-text="Managing dependencies">Managing dependencies</h3>
+
+<p>Dependencies for your project are specified by name in the <code translate="no" dir="ltr">build.gradle</code> file.
+Gradle takes care of finding your dependencies and making them available in your
+build. You can declare module dependencies, remote binary dependencies, and
+local binary dependencies in your <code translate="no" dir="ltr">build.gradle</code> file. Android Studio configures
+projects to use the Maven Central Repository by default. (This configuration is
+included in the top-level build file for the project.) For more information
+about configuring dependencies, read
+<a href="/studio/build/dependencies">Add build dependencies</a>.</p>
+
+<p><a name="debug-perf"></a></p>
+
+<h2 id="debug_and_profile_tools" data-text="Debug and profile tools">Debug and profile tools</h2>
+
+<p>Android Studio assists you in debugging and improving the performance of your
+code, including inline debugging and performance analysis tools.</p>
+
+<p><a name="inline-debug"></a></p>
+
+<h3 id="inline_debugging" data-text="Inline debugging">Inline debugging</h3>
+
+<p>Use inline debugging to enhance your code walk-throughs in the debugger view
+with inline verification of references, expressions, and variable values.
+Inline debug information includes:</p>
+
+<ul>
+<li>Inline variable values</li>
+<li>Referring objects that reference a selected object</li>
+<li>Method return values</li>
+<li>Lambda and operator expressions</li>
+<li>Tooltip values</li>
+</ul>
+
+<p><img src="/studio/images/intro/inline-variable-value-debug_2-1_2x.png" width="624" alt=""
+id="inline-variable"/></p>
+
+<p class="img-caption">
+  <strong>Figure 6.</strong> An inline variable value.
+</p>
+
+<p>To enable inline debugging, in the <strong>Debug</strong> window, click <strong>Settings</strong>
+<img src="/images/tools/studio-debug-settings-icon.png" class="inline-icon"
+alt=""/>and select the checkbox for <strong>Show Values Inline</strong>.</p>
+
+<p><a name="monitors"></a></p>
+
+<h3 id="performance_profilers" data-text="Performance profilers">Performance profilers</h3>
+
+<p>Android Studio provides performance profilers so you can more easily track your
+app’s memory and CPU usage, find deallocated objects, locate memory leaks,
+optimize graphics performance, and analyze network requests. With your app
+running on a device or emulator, open the <strong>Android Profiler</strong> tab.</p>
+
+<p>For more information about performance profilers, see
+<a href="/studio/profile">Performance profiling tools</a>.</p>
+
+<p><a name="heap-dump"></a></p>
+
+<h3 id="heap_dump" data-text="Heap dump">Heap dump</h3>
+
+<p>When you’re profiling memory usage in Android Studio, you can simultaneously
+initiate garbage collection and dump the Java heap to a heap snapshot in an
+Android-specific HPROF binary format file. The HPROF viewer displays classes,
+instances of each class, and a reference tree to help you track memory usage
+and find memory leaks.</p>
+
+<p>For more information about working with heap dumps, see
+<a href="/studio/profile/memory-profiler">Inspect the heap and allocations</a>.</p>
+
+<p><a name="allocation"></a></p>
+
+<h3 id="memory_profiler" data-text="Memory Profiler">Memory Profiler</h3>
+
+<p>You can use Memory Profiler to track memory allocation and watch where objects
+are being allocated when you perform certain actions. Knowing these allocations
+enables you to optimize your app’s performance and memory use by adjusting the
+method calls related to those actions.</p>
+
+<p>For information about tracking and analyzing allocations, see
+<a href="/studio/profile/memory-profiler">Inspect the heap and allocations</a>.</p>
+
+<p><a name="data-file"></a></p>
+
+<h3 id="data_file_access" data-text="Data file access">Data file access</h3>
+
+<p>The Android SDK tools, such as <a href="/topic/performance/tracing/command-line">Systrace</a>,
+and <a href="/studio/debug/am-logcat">logcat</a>,
+generate performance and debugging data for detailed app analysis.</p>
+
+<p>To view the available generated data files, open the Captures tool window. In
+the list of the generated files, double-click a file to view the data.
+Right-click any <code translate="no" dir="ltr">.hprof</code> files to convert them to the standard
+<a href="/studio/profile/investigate-ram">Investigate your RAM usage</a> file format.</p>
+
+<p><a name="code-inspection"></a></p>
+
+<h3 id="code_inspections" data-text="Code inspections">Code inspections</h3>
+
+<p>Whenever you compile your program, Android Studio automatically runs configured
+<a href="/studio/write/lint">Lint</a> and other
+<a class="external-link"
+href="https://www.jetbrains.com/help/idea/2020.2/code-inspection.html">
+IDE inspections</a> to help you easily
+identify and correct problems with the structural quality of your code.</p>
+
+<p>The Lint tool checks your Android project source files for potential bugs and
+optimization improvements for correctness, security, performance, usability,
+accessibility, and internationalization.</p>
+
+<p><img src="/studio/images/intro/lint-inspection-results_2-1_2x.png" width="767"
+alt="" id="lint-inspection"/></p>
+
+<p class="img-caption">
+  <strong>Figure 7.</strong> The results of a Lint inspection in Android Studio.
+</p>
+
+<p>In addition to Lint checks, Android Studio also performs IntelliJ code
+inspections and validates annotations to streamline your coding workflow.</p>
+
+<p>For more information, see
+<a href="/studio/write/lint">Improve your code with lint checks</a>.</p>
+
+<p><a name="annotations"></a></p>
+
+<h3 id="annotations_in_android_studio" data-text="Annotations in Android Studio">Annotations in Android Studio</h3>
+
+<p>Android Studio supports annotations for variables, parameters, and return
+values to help you catch bugs, such as null pointer exceptions and resource
+type conflicts. The Android SDK Manager packages the Support-Annotations
+library in the Android Support Repository for use with Android Studio. Android
+Studio validates the configured annotations during code inspection.</p>
+
+<p>For more details about Android annotations, see
+<a href="/studio/write/annotations">Improve code inspection with annotations</a>.</p>
+
+<p><a name="log-message"></a></p>
+
+<h3 id="log_messages" data-text="Log messages">Log messages</h3>
+
+<p>When you build and run your app with Android Studio, you can view
+<a href="/studio/command-line/adb">adb</a> output and device log messages
+in the <a href="/studio/debug/am-logcat"><strong>Logcat</strong> window</a>.</p>
+
+<p><a name="perf"></a></p>
+
+<h3 id="performance_profiling" data-text="Performance profiling">Performance profiling</h3>
+
+<p>If you want to profile your app&#39;s CPU, memory, and network performance,
+open the <a href="/studio/profile/android-profiler">Android Profiler</a>,
+by clicking <strong>View &gt; Tool Windows &gt; Android Profiler</strong>.</p>
+
+<h2 id="sign-in" data-text="Sign in to your developer account">Sign in to your developer account</h2>
+
+<p>You can sign in to your developer account in Android Studio to access
+additional tools that requires authentication, such as <a href="https://cloud.google.com/tools/android-studio/docs/">Cloud Tools for Android
+Studio</a> and the <a href="https://developers.google.com/assistant/app/test-tool">App
+Actions test tool</a>. By
+signing in, you give those tools permission to view and manage your data across
+Google services.</p>
+
+<p>After you open a project in Android Studio, you can sign in to your developer
+account or switch developer accounts, as follows:</p>
+
+<ol>
+<li><p>Click the profile icon <img src="/studio/images/intro/profile-icon.png"
+alt="" class="inline-icon"> at the end of the toolbar, as shown in figure 8.</p>
+
+<p><img src="/studio/images/intro/profile-toolbar.png" alt=""/></p>
+
+<p class="img-caption">
+<b>Figure 8.</b> Click the profile icon at the end of the toolbar to sign in.
+</p></li>
+<li><p>In the window that appears, do one of the following:</p>
+
+<ul>
+<li>If you&#39;re not yet signed in, click <strong>Sign In</strong> and allow Android Studio to
+access the listed services.</li>
+<li>If you&#39;re already signed in, click <strong>Add Account</strong> to sign in with another
+Google account. Alternatively, you can click <strong>Sign Out</strong> and repeat the
+previous steps to sign in to a different account.</li>
+</ul></li>
+</ol>
+
+    
+
+    
+      <devsite-hats-survey class="nocontent"
+        hats-id=onAFgYxTD0kxBYCLVTd0Z41p75CM
+        listnr-id=5207477></devsite-hats-survey>
+    
+  </div>
+
+  
+
+  
+    
+      
+    <devsite-thumb-rating position="footer">
+       <template class="thumb-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples/Code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+       <template class="thumb-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+       
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Content and code samples on this page are subject to the licenses described in the <a href="/license">Content License</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2021-05-18 UTC.</p>
+</devsite-content-footer>
+
+
+
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+
+<nav class="devsite-footer-promos nocontent" aria-label="Promotions">
+  <ul class="devsite-footer-promos-list">
+    
+    <li class="devsite-footer-promo">
+      <a href="//twitter.com/AndroidDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="Footer Twitter Promo"
+       >
+        
+        
+        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-twitter.svg"
+             loading="lazy"
+             alt="Twitter">
+        
+        Twitter
+      </a>
+      <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="//www.youtube.com/user/androiddevelopers"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+       
+         data-label="Footer YouTube Promo"
+       >
+        
+        
+        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png"
+             loading="lazy"
+             alt="YouTube">
+        
+        YouTube
+      </a>
+      <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+    </li>
+    
+  </ul>
+</nav>
+
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">More Android</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.android.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+          
+            Android
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.android.com/enterprise/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+          
+            Enterprise
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.android.com/security-center/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            Security
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//source.android.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+          
+            Source
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Support</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+          
+            Report platform bug
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//issuetracker.google.com/issues/new?component=192697"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+          
+            Report documentation bug
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//support.google.com/googleplay/android-developer"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            Google Play support
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://google.qualtrics.com/jfe/form/SV_ewWXIoEVLBcyp7f??reserved=1&amp;utm_source=FooterLink&amp;Q_Language=en&amp;utm_medium=own_srch&amp;utm_campaign=developer.android.com&amp;utm_term=0&amp;utm_content=0&amp;productTag=reg&amp;campaignDate=may19&amp;pType=devel&amp;referral_code=gV420370"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+          
+            Join research studies
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Documentation</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/guide"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+          
+            Developer guides
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/design"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+          
+            Design guides
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/reference"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            API reference
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/samples"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+          
+            Samples
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/studio/intro"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+          
+            Android Studio
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/images/lockup-developers.svg"
+           loading="lazy"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developers.google.com/products/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/license"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer License link"
+         >
+          License
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/distribute/marketing-tools/brand-guidelines"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Brand guidelines link"
+         >
+          Brand guidelines
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+        
+        <span class="devsite-footer-utility-description">Get news and tips by email</span>
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/updates"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          Subscribe
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+
+    
+<devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    
+    <select aria-label="Select your language preference."
+            class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+    
+      
+      <option>Language</option>
+    
+    
+      <option value="en"
+              lang="en"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+    
+      <option value="id"
+              lang="id"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+    
+      <option value="es_419"
+              lang="es_419"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+    
+      <option value="pt_br"
+              lang="pt_br"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+    
+      <option value="zh_cn"
+              lang="zh_cn"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+    
+      <option value="ja"
+              lang="ja"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+    
+      <option value="ko"
+              lang="ko"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+    
+    </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    
+<devsite-snackbar 
+                  ></devsite-snackbar>
+
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics enable-analytics-iframe>
+      
+        <script type="application/json" analytics>[{"gaid": "UA-5831155-1", "dimensions": {"dimension6": "en", "dimension3": false, "dimension4": "Android Developers", "dimension1": "Signed out", "dimension11": false, "dimension5": "en"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "Android Developers", "scriptsafe": null, "signedIn": "False", "tenant": "android", "recommendations": {"sourcePage": "", "sourceType": 0, "sourceRank": 0, "sourceIdenticalDescriptions": 0, "sourceTitleWords": 0, "sourceDescriptionWords": 0, "experiment": ""}}, "tags": ["GTM-KMSWPCJ"]}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    <android-fully-clickable target=".fully-clickable"></android-fully-clickable>
+    <script nonce="dZHULtHwN0UECi2WKDwfOq9T/BAt10">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/js/app_loader.js', '[3,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android","https://android-dot-devsite-v2-prod.appspot.com",1,null,["/_pwa/android/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,45,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,105,107,108,111,112,113,115,116,117,118,120,122,123,124,125,127,129,131,132,133,134,135,136,138,145],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg"]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

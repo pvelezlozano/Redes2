@@ -1,0 +1,6429 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email">
+    <meta property="og:site_name" content="Firebase">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#039be5"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/firebase/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/css/app.css"><link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/images/touchicon-180.png"><link rel="canonical" href="https://firebase.google.com/docs/crashlytics/upgrade-sdk"><link rel="search" type="application/opensearchdescription+xml"
+            title="Firebase" href="https://firebase.google.com/s/opensearch.xml">
+      
+
+<title>Upgrade to the Firebase Crashlytics SDK</title>
+
+<meta property="og:title" content="Upgrade to the Firebase Crashlytics SDK"><meta property="og:url" content="https://firebase.google.com/docs/crashlytics/upgrade-sdk"><meta property="og:locale" content="en">
+  
+    
+    
+    
+    
+    
+    
+    
+    
+
+  
+
+    </head>
+  <body class=""
+        template="page"
+        theme="firebase-theme"
+        type="article"
+        
+        layout="docs"
+        
+        
+        
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper"><devsite-header>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="firebase" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+
+  <img src="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/images/lockup.png" class="devsite-site-logo"
+       alt="Firebase">
+
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab dropdown
+    
+    
+    
+    >
+  <a href="https://firebase.google.com/products-build"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="products"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Products"
+   >
+  Products
+</a>
+
+  <a href="#"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false"
+     aria-label="Dropdown menu for Products"
+     track-type="globalNav"
+     track-metadata-position="nav"
+     track-metadata-eventdetail="nav"
+     track-name="products"
+     
+       data-category="Site-Wide Custom Events"
+     
+       data-label="Tab: Products"
+     
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/products-build"
+                     track-type="navMenu"
+                     track-name="Build"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/products-build"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Build
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/products-release"
+                     track-type="navMenu"
+                     track-name="Release &amp; Monitor"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/products-release"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release & Monitor
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/products-engage"
+                     track-type="navMenu"
+                     track-name="Engage"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/products-engage"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Engage
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            <a href="https://firebase.google.com/use-cases"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="useCases"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Use Cases"
+   >
+  Use Cases
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://firebase.google.com/pricing"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="pricing"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Pricing"
+   >
+  Pricing
+</a>
+
+          </tab>
+        
+      
+        
+          <tab dropdown
+    
+    active
+    
+    >
+  <a href="https://firebase.google.com/docs"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="docs"
+   aria-label="Docs, selected" 
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Docs"
+   >
+  Docs
+</a>
+
+  <a href="#"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false"
+     aria-label="Dropdown menu for Docs"
+     track-type="globalNav"
+     track-metadata-position="nav"
+     track-metadata-eventdetail="nav"
+     track-name="docs"
+     
+       data-category="Site-Wide Custom Events"
+     
+       data-label="Tab: Docs"
+     
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs"
+                     track-type="navMenu"
+                     track-name="Overview"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Overview
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/guides"
+                     track-type="navMenu"
+                     track-name="Fundamentals"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/guides"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Fundamentals
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/build"
+                     track-type="navMenu"
+                     track-name="Build"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/build"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Build
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/release"
+                     track-type="navMenu"
+                     track-name="Release &amp; Monitor"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/release"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release & Monitor
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/engage"
+                     track-type="navMenu"
+                     track-name="Engage"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/engage"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Engage
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/reference"
+                     track-type="navMenu"
+                     track-name="Reference"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/reference"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Reference
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/samples"
+                     track-type="navMenu"
+                     track-name="Samples"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/samples"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Samples
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/libraries"
+                     track-type="navMenu"
+                     track-name="Libraries"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/libraries"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Libraries
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            <a href="https://firebase.google.com/community"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="community"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Community"
+   >
+  Community
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://firebase.google.com/support"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="support"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Support"
+   >
+  Support
+</a>
+
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    project-name="Firebase"
+    tenant-name="Firebase"
+    
+    
+    
+    
+    
+    role="combobox">
+  <form class="devsite-search-form" action="https://firebase.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-haspopup="false"
+          aria-multiline="false"
+          aria-label="Search box"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        
+<devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    
+    <select aria-label="Select your language preference."
+            class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+    
+      
+      <option>Language</option>
+    
+    
+      <option value="en"
+              lang="en"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+    
+      <option value="id"
+              lang="id"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+    
+      <option value="de"
+              lang="de"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+    
+      <option value="es_419"
+              lang="es_419"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+    
+      <option value="fr"
+              lang="fr"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+    
+      <option value="it"
+              lang="it"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="it"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Italiano
+      </option>
+    
+      <option value="pl"
+              lang="pl"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="pl"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Polski
+      </option>
+    
+      <option value="pt_br"
+              lang="pt_br"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+    
+      <option value="vi"
+              lang="vi"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+    
+      <option value="tr"
+              lang="tr"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+    
+      <option value="ru"
+              lang="ru"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+    
+      <option value="he"
+              lang="he"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="he"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        עברית&#39;
+      </option>
+    
+      <option value="ar"
+              lang="ar"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ar"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        العربيّة
+      </option>
+    
+      <option value="fa"
+              lang="fa"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="fa"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        فارسی
+      </option>
+    
+      <option value="hi"
+              lang="hi"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="hi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        हिंदी
+      </option>
+    
+      <option value="bn"
+              lang="bn"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="bn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        বাংলা
+      </option>
+    
+      <option value="th"
+              lang="th"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+    
+      <option value="zh_cn"
+              lang="zh_cn"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+    
+      <option value="zh_tw"
+              lang="zh_tw"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+    
+      <option value="ja"
+              lang="ja"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+    
+      <option value="ko"
+              lang="ko"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+    
+    </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+          
+  <a class="devsite-header-link devsite-top-button button gc-analytics-event"
+     href="//console.firebase.google.com"
+     data-category="Site-Wide Custom Events"
+     data-label="Site header link"
+     >
+    Go to console
+  </a>
+  
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          
+                            fp-auth
+                          
+                        id="devsite-user"></devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://firebase.google.com/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Documentation
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            <a href="https://firebase.google.com/docs"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="overview"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Overview"
+   >
+  Overview
+</a>
+
+          </tab>
+        
+      
+        
+          <tab dropdown
+    
+    
+    
+    >
+  <a href="https://firebase.google.com/docs/guides"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="fundamentals"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Fundamentals"
+   >
+  Fundamentals
+</a>
+
+  <a href="#"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false"
+     aria-label="Dropdown menu for Fundamentals"
+     track-type="globalNav"
+     track-metadata-position="nav"
+     track-metadata-eventdetail="nav"
+     track-name="fundamentals"
+     
+       data-category="Site-Wide Custom Events"
+     
+       data-label="Tab: Fundamentals"
+     
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/ios/setup"
+                     track-type="navMenu"
+                     track-name="Add Firebase - iOS"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/ios/setup"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Add Firebase - iOS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/android/setup"
+                     track-type="navMenu"
+                     track-name="Add Firebase - Android"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/android/setup"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Add Firebase - Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/web/setup"
+                     track-type="navMenu"
+                     track-name="Add Firebase - Web"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/web/setup"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Add Firebase - Web
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/cpp/setup"
+                     track-type="navMenu"
+                     track-name="Add Firebase - C++"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/cpp/setup"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Add Firebase - C++
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/unity/setup"
+                     track-type="navMenu"
+                     track-name="Add Firebase - Unity"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/unity/setup"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Add Firebase - Unity
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/admin/setup"
+                     track-type="navMenu"
+                     track-name="Add Firebase - Server environments"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/admin/setup"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Add Firebase - Server environments
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/projects/learn-more"
+                     track-type="navMenu"
+                     track-name="Manage Projects"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/projects/learn-more"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Manage Projects
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/app-check"
+                     track-type="navMenu"
+                     track-name="Protect project resources with App Check"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/app-check"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Protect project resources with App Check
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/emulator-suite"
+                     track-type="navMenu"
+                     track-name="Use Emulator Suite"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/emulator-suite"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Use Emulator Suite
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab dropdown
+    
+    
+    
+    >
+  <a href="https://firebase.google.com/docs/build"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="build"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Build"
+   >
+  Build
+</a>
+
+  <a href="#"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false"
+     aria-label="Dropdown menu for Build"
+     track-type="globalNav"
+     track-metadata-position="nav"
+     track-metadata-eventdetail="nav"
+     track-name="build"
+     
+       data-category="Site-Wide Custom Events"
+     
+       data-label="Tab: Build"
+     
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/emulator-suite"
+                     track-type="navMenu"
+                     track-name="Emulator Suite"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/emulator-suite"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Emulator Suite
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/auth"
+                     track-type="navMenu"
+                     track-name="Authentication"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/auth"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Authentication
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/database"
+                     track-type="navMenu"
+                     track-name="Realtime Database"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/database"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Realtime Database
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/firestore"
+                     track-type="navMenu"
+                     track-name="Firestore"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/firestore"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Firestore
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/storage"
+                     track-type="navMenu"
+                     track-name="Storage"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/storage"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Storage
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/ml"
+                     track-type="navMenu"
+                     track-name="ML"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/ml"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ML
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/hosting"
+                     track-type="navMenu"
+                     track-name="Hosting"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/hosting"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Hosting
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/functions"
+                     track-type="navMenu"
+                     track-name="Cloud Functions"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/functions"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud Functions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/rules"
+                     track-type="navMenu"
+                     track-name="Security Rules"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/rules"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Security Rules
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/extensions"
+                     track-type="navMenu"
+                     track-name="Extensions"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/extensions"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab dropdown
+    
+    active
+    
+    >
+  <a href="https://firebase.google.com/docs/release"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="release&amp;Monitor"
+   aria-label="Release &amp; Monitor, selected" 
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Release &amp; Monitor"
+   >
+  Release &amp; Monitor
+</a>
+
+  <a href="#"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false"
+     aria-label="Dropdown menu for Release &amp; Monitor"
+     track-type="globalNav"
+     track-metadata-position="nav"
+     track-metadata-eventdetail="nav"
+     track-name="release&amp;Monitor"
+     
+       data-category="Site-Wide Custom Events"
+     
+       data-label="Tab: Release &amp; Monitor"
+     
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/crashlytics"
+                     track-type="navMenu"
+                     track-name="Crashlytics"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/crashlytics"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Crashlytics
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/perf-mon"
+                     track-type="navMenu"
+                     track-name="Performance Monitoring"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/perf-mon"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performance Monitoring
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/test-lab"
+                     track-type="navMenu"
+                     track-name="Test Lab"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/test-lab"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Test Lab
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/app-distribution"
+                     track-type="navMenu"
+                     track-name="App Distribution"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/app-distribution"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      App Distribution
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab dropdown
+    
+    
+    
+    >
+  <a href="https://firebase.google.com/docs/engage"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="engage"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Engage"
+   >
+  Engage
+</a>
+
+  <a href="#"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false"
+     aria-label="Dropdown menu for Engage"
+     track-type="globalNav"
+     track-metadata-position="nav"
+     track-metadata-eventdetail="nav"
+     track-name="engage"
+     
+       data-category="Site-Wide Custom Events"
+     
+       data-label="Tab: Engage"
+     
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/analytics"
+                     track-type="navMenu"
+                     track-name="Analytics"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/analytics"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Analytics
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/remote-config"
+                     track-type="navMenu"
+                     track-name="Remote Config"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/remote-config"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Remote Config
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/predictions"
+                     track-type="navMenu"
+                     track-name="Predictions"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/predictions"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Predictions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/ab-testing"
+                     track-type="navMenu"
+                     track-name="A/B Testing"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/ab-testing"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      A/B Testing
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/cloud-messaging"
+                     track-type="navMenu"
+                     track-name="Cloud Messaging"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/cloud-messaging"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud Messaging
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/in-app-messaging"
+                     track-type="navMenu"
+                     track-name="In-App Messaging"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/in-app-messaging"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      In-App Messaging
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/dynamic-links"
+                     track-type="navMenu"
+                     track-name="Dynamic Links"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/dynamic-links"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Dynamic Links
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/admob"
+                     track-type="navMenu"
+                     track-name="Google AdMob"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/admob"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google AdMob
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/ads"
+                     track-type="navMenu"
+                     track-name="Google Ads"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/ads"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Ads
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.com/docs/app-indexing"
+                     track-type="navMenu"
+                     track-name="App Indexing"
+                     track-metadata-position="nav"
+                     track-metadata-href="https://firebase.google.com/docs/app-indexing"
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      App Indexing
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            <a href="https://firebase.google.com/docs/reference"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="reference"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Reference"
+   >
+  Reference
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://firebase.google.com/docs/samples"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="samples"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Samples"
+   >
+  Samples
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://firebase.google.com/docs/libraries"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="libraries"
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Libraries"
+   >
+  Libraries
+</a>
+
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="firebase" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+
+  <img src="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/images/lockup.png" class="devsite-site-logo" alt="Firebase">
+
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/products-build"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Products"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="products">
+  
+    <span class="devsite-nav-text" tooltip >
+      Products
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Products">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Products">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/use-cases"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Use Cases"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="useCases">
+  
+    <span class="devsite-nav-text" tooltip >
+      Use Cases
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/pricing"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Pricing"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="pricing">
+  
+    <span class="devsite-nav-text" tooltip >
+      Pricing
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="docs">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Docs">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Docs">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="overview">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/guides"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Fundamentals"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="fundamentals">
+  
+    <span class="devsite-nav-text" tooltip >
+      Fundamentals
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+                devsite-lower-tab-item">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Fundamentals">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Fundamentals">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/build"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Build"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="build">
+  
+    <span class="devsite-nav-text" tooltip >
+      Build
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+                devsite-lower-tab-item">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Build">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Build">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/release"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release &amp; Monitor"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="release&amp;Monitor">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Release &amp; Monitor
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+                devsite-lower-tab-item">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Release &amp; Monitor">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Release &amp; Monitor">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/engage"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Engage"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="engage">
+  
+    <span class="devsite-nav-text" tooltip >
+      Engage
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+                devsite-lower-tab-item">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Engage">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Engage">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/reference"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Reference"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="reference">
+  
+    <span class="devsite-nav-text" tooltip >
+      Reference
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/samples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Samples"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="samples">
+  
+    <span class="devsite-nav-text" tooltip >
+      Samples
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/libraries"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Libraries"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="libraries">
+  
+    <span class="devsite-nav-text" tooltip >
+      Libraries
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/community"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Community"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="community">
+  
+    <span class="devsite-nav-text" tooltip >
+      Community
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/support"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Support"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="support">
+  
+    <span class="devsite-nav-text" tooltip >
+      Support
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+    
+<li class="devsite-nav-item">
+
+  
+  <a href="//console.firebase.google.com"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Go to console"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="goToConsole">
+  
+    <span class="devsite-nav-text" tooltip >
+      Go to console
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+  
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom" role="navigation">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/docs/release"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Crashlytics</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/crashlytics"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Introduction</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/get-started"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get started</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/upgrade-sdk"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Upgrade from Fabric (legacy)</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/start-using-analytics"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get metrics with Google Analytics</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/test-implementation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test your implementation</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/customize-crash-reports"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Customize crash reports</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/get-deobfuscated-reports"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get deobfuscated crash reports</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/ndk-reports"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get Android NDK crash reports</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/velocity-alerts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Customize velocity alerts</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/bigquery-export"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Export data to BigQuery</span></a></li><li class="devsite-nav-item"><a href="/docs/crashlytics/troubleshooting"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Performance Monitoring</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/perf-mon"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Introduction</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Get started</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/perf-mon/get-started-ios"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>iOS</span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/get-started-android"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/docs/perf-mon/get-started-web"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Web</span><span class="devsite-nav-icon material-icons"
+          data-icon="beta"
+          data-title="Beta"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>Learn about automatically collected data</span></div></li><li class="devsite-nav-item"><a href="/docs/perf-mon/app-start-foreground-background-traces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>App start, foreground, background (iOS &amp; Android)</span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/screen-traces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Screen rendering (iOS &amp; Android)</span></a></li><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/docs/perf-mon/page-load-traces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Page loading (web)</span><span class="devsite-nav-icon material-icons"
+          data-icon="beta"
+          data-title="Beta"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/network-traces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>HTTP/S network requests</span></a></li><li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>Customize data collection and aggregation</span></div></li><li class="devsite-nav-item"><a href="/docs/perf-mon/custom-code-traces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Add monitoring for specific code</span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/custom-network-traces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Add monitoring for specific network requests</span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/custom-url-patterns"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Create custom URL patterns</span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/disable-sdk"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Disable Performance Monitoring</span></a></li><li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>Track, view, and filter data</span></div></li><li class="devsite-nav-item"><a href="/docs/perf-mon/console"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview of the console</span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/attributes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Filter data using attributes</span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/issue-management"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>View performance issues</span></a></li><li class="devsite-nav-item"><a href="/docs/perf-mon/bigquery-export"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Export data to BigQuery</span></a></li><li class="devsite-nav-item
+           devsite-nav-break"></li><li class="devsite-nav-item"><a href="/docs/perf-mon/troubleshooting"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Troubleshooting &amp; FAQ</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Test Lab</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/test-lab"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Introduction</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>iOS</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/test-lab/ios/get-started"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get started</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/ios/run-game-loop-test"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Run a Game Loop test</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/ios/run-xctest"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Run an XCTest</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/ios/firebase-console"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test with the Firebase console</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/ios/command-line"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test with the gcloud CLI</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/ios/available-testing-devices"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test on available devices</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/ios/analyzing-results"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Analyze test results</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Android</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/test-lab/android/get-started"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get started</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/instrumentation-test"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Run an instrumentation test</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/robo-ux-test"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Run a Robo test</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/game-loop"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Run a Game Loop test</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/firebase-console"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test with the Firebase console</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/command-line"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test with the gcloud CLI</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/android-studio"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test with Android Studio</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/available-testing-devices"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test on available devices</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/avds"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test with virtual devices</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/analyzing-results"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Analyze test results</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item
+           devsite-nav-new"><a href="/docs/test-lab/troubleshooting"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Troubleshooting</span><span class="devsite-nav-icon material-icons"
+          data-icon="new"
+          data-title="New!"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item
+           devsite-nav-new"><a href="/docs/test-lab/usage-quotas-pricing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Usage, quotas, &amp; pricing</span><span class="devsite-nav-icon material-icons"
+          data-icon="new"
+          data-title="New!"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/android/continuous"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test with CI systems</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/extend-with-functions"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Extend with Cloud Functions</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>REST API reference</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/test-lab/reference/testing/rest"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Testing (submit test &amp; monitor)</span></a></li><li class="devsite-nav-item"><a href="/docs/test-lab/reference/toolresults/rest"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>ToolResults (retrieve results)</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion
+           devsite-nav-beta"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>App Distribution</span><span class="devsite-nav-icon material-icons"
+          data-icon="beta"
+          data-title="Beta"
+          aria-hidden="true"></span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/app-distribution"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Introduction</span></a></li><li class="devsite-nav-item"><a href="/docs/app-distribution/manage-testers"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Manage testers</span></a></li><li class="devsite-nav-item"><a href="/docs/app-distribution/troubleshooting"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>Set up for testers</span></div></li><li class="devsite-nav-item"><a href="/docs/app-distribution/ios/set-up-for-testing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>iOS</span></a></li><li class="devsite-nav-item"><a href="/docs/app-distribution/android/set-up-for-testing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>Distribute iOS apps</span></div></li><li class="devsite-nav-item"><a href="/docs/app-distribution/ios/distribute-console"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use the Firebase console</span></a></li><li class="devsite-nav-item"><a href="/docs/app-distribution/ios/distribute-cli"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use the Firebase CLI</span></a></li><li class="devsite-nav-item"><a href="/docs/app-distribution/ios/distribute-fastlane"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use fastlane</span></a></li><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/docs/app-distribution/set-up-alerts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Set up in-app alerts</span><span class="devsite-nav-icon material-icons"
+          data-icon="beta"
+          data-title="Beta"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>Distribute Android apps</span></div></li><li class="devsite-nav-item"><a href="/docs/app-distribution/android/distribute-console"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use the Firebase console</span></a></li><li class="devsite-nav-item"><a href="/docs/app-distribution/android/distribute-cli"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use the Firebase CLI</span></a></li><li class="devsite-nav-item"><a href="/docs/app-distribution/android/distribute-fastlane"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use fastlane</span></a></li><li class="devsite-nav-item"><a href="/docs/app-distribution/android/distribute-gradle"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use Gradle</span></a></li></ul></devsite-expandable-nav></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-divider
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>Related products</span></div></li>
+
+  <li class="devsite-nav-item"><a href="//firebase.google.com/docs/analytics/"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Analytics</span></a></li>
+
+  <li class="devsite-nav-item"><a href="//firebase.google.com/docs/remote-config/"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Remote Config</span></a></li>
+          </ul>
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="Products"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/products-build"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Build"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="build">
+  
+    <span class="devsite-nav-text" tooltip >
+      Build
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/products-release"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release &amp; Monitor"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="release&amp;Monitor">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release &amp; Monitor
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/products-engage"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Engage"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="engage">
+  
+    <span class="devsite-nav-text" tooltip >
+      Engage
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Docs"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="overview">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/guides"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Fundamentals"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="fundamentals">
+  
+    <span class="devsite-nav-text" tooltip >
+      Fundamentals
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/build"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Build"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="build">
+  
+    <span class="devsite-nav-text" tooltip >
+      Build
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/release"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release &amp; Monitor"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="release&amp;Monitor">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release &amp; Monitor
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/engage"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Engage"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="engage">
+  
+    <span class="devsite-nav-text" tooltip >
+      Engage
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/reference"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Reference"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="reference">
+  
+    <span class="devsite-nav-text" tooltip >
+      Reference
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/samples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Samples"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="samples">
+  
+    <span class="devsite-nav-text" tooltip >
+      Samples
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/libraries"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Libraries"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="libraries">
+  
+    <span class="devsite-nav-text" tooltip >
+      Libraries
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+        
+        
+          
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Fundamentals"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/ios/setup"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Add Firebase - iOS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="addFirebase-IOS">
+  
+    <span class="devsite-nav-text" tooltip >
+      Add Firebase - iOS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android/setup"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Add Firebase - Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="addFirebase-Android">
+  
+    <span class="devsite-nav-text" tooltip >
+      Add Firebase - Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web/setup"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Add Firebase - Web"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="addFirebase-Web">
+  
+    <span class="devsite-nav-text" tooltip >
+      Add Firebase - Web
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/cpp/setup"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Add Firebase - C++"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="addFirebase-C++">
+  
+    <span class="devsite-nav-text" tooltip >
+      Add Firebase - C++
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/unity/setup"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Add Firebase - Unity"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="addFirebase-Unity">
+  
+    <span class="devsite-nav-text" tooltip >
+      Add Firebase - Unity
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/admin/setup"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Add Firebase - Server environments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="addFirebase-ServerEnvironments">
+  
+    <span class="devsite-nav-text" tooltip >
+      Add Firebase - Server environments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/projects/learn-more"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Manage Projects"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="manageProjects">
+  
+    <span class="devsite-nav-text" tooltip >
+      Manage Projects
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/app-check"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Protect project resources with App Check"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="protectProjectResourcesWithAppCheck">
+  
+    <span class="devsite-nav-text" tooltip >
+      Protect project resources with App Check
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/emulator-suite"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Use Emulator Suite"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="useEmulatorSuite">
+  
+    <span class="devsite-nav-text" tooltip >
+      Use Emulator Suite
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Build"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/emulator-suite"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Emulator Suite"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="emulatorSuite">
+  
+    <span class="devsite-nav-text" tooltip >
+      Emulator Suite
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/auth"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Authentication"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="authentication">
+  
+    <span class="devsite-nav-text" tooltip >
+      Authentication
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/database"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Realtime Database"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="realtimeDatabase">
+  
+    <span class="devsite-nav-text" tooltip >
+      Realtime Database
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/firestore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Firestore"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="firestore">
+  
+    <span class="devsite-nav-text" tooltip >
+      Firestore
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/storage"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Storage"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="storage">
+  
+    <span class="devsite-nav-text" tooltip >
+      Storage
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/ml"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ML"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="mL">
+  
+    <span class="devsite-nav-text" tooltip >
+      ML
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/hosting"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Hosting"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="hosting">
+  
+    <span class="devsite-nav-text" tooltip >
+      Hosting
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/functions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud Functions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="cloudFunctions">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud Functions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/rules"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Security Rules"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="securityRules">
+  
+    <span class="devsite-nav-text" tooltip >
+      Security Rules
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="extensions">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Release &amp; Monitor"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crashlytics"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Crashlytics"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="crashlytics">
+  
+    <span class="devsite-nav-text" tooltip >
+      Crashlytics
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/perf-mon"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performance Monitoring"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="performanceMonitoring">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performance Monitoring
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/test-lab"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Test Lab"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="testLab">
+  
+    <span class="devsite-nav-text" tooltip >
+      Test Lab
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/app-distribution"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: App Distribution"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="appDistribution">
+  
+    <span class="devsite-nav-text" tooltip >
+      App Distribution
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Engage"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/analytics"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Analytics"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="analytics">
+  
+    <span class="devsite-nav-text" tooltip >
+      Analytics
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/remote-config"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Remote Config"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="remoteConfig">
+  
+    <span class="devsite-nav-text" tooltip >
+      Remote Config
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/predictions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Predictions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="predictions">
+  
+    <span class="devsite-nav-text" tooltip >
+      Predictions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/ab-testing"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: A/B Testing"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="a/BTesting">
+  
+    <span class="devsite-nav-text" tooltip >
+      A/B Testing
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/cloud-messaging"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud Messaging"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="cloudMessaging">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud Messaging
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/in-app-messaging"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: In-App Messaging"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="in-AppMessaging">
+  
+    <span class="devsite-nav-text" tooltip >
+      In-App Messaging
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/dynamic-links"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Dynamic Links"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="dynamicLinks">
+  
+    <span class="devsite-nav-text" tooltip >
+      Dynamic Links
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/admob"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google AdMob"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googleAdMob">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google AdMob
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/ads"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Ads"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googleAds">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Ads
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/app-indexing"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: App Indexing"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="appIndexing">
+  
+    <span class="devsite-nav-text" tooltip >
+      App Indexing
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav
+            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      /* Styles inlined from /styles/docs.css */
+.center {
+  text-align: center
+}
+
+/* Used in AdMob code examples */
+.oldcode {
+  opacity: .40;
+
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+
+  /* IE <= 7 */
+  filter:alpha(opacity=40);
+}
+
+.newcode {
+  font-weight: bold;
+}
+
+/* Device Screenshots */
+.deviceshot {
+  max-width: 700px;
+  max-height: 400px;
+}
+
+
+/* Start Changelog styles */
+.badge {
+    position: relative;
+    top: -3px;
+    border-radius: 16px;
+    display: inline-block;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Colours for each type of changelog entry. */
+/* TODO: Change the colours to match the site colour scheme */
+
+.badge-changed {
+    background-color: #F4B400;
+    color: #fff;
+}
+
+.badge-fixed {
+    background-color: #4285F4;
+    color: #fff;
+}
+
+.badge-important {
+    background-color: #DB4437;
+    color: #fff;
+}
+
+.badge-feature {
+    background-color: #0F9D58;
+    color: #fff;
+}
+
+.badge-deprecated {
+    background-color: #DB4437;
+    color: #fff;
+}
+
+.badge-issue {
+    background-color: #DB4437;
+    color: #fff;
+}
+
+.changelog > ul  {
+  padding-left: 0;
+}
+
+.changelog > ul > li {
+  list-style-type: none;
+  margin-bottom: 22px;
+}
+
+.firebase-support-release-page .changelog > ul {
+  list-style-type: none;
+  padding-left: 110px;
+}
+
+.firebase-release-roundup .changelog > ul {
+  list-style-type: disc outside;
+  padding-left: 40px;
+}
+
+.firebase-release-roundup .changelog > ul > li {
+  list-style-type: disc outside;
+  margin-bottom: 12px;
+}
+
+.release-changed::before, .release-feature::before, .release-fixed::before,
+.release-issue::before, .release-deprecated::before, .release-removed::before,
+.release-unchanged::before, .release-rules::before,
+.release-android::before, .release-android-bom::before, .release-ios::before,
+.release-admin::before, .release-cpp::before, .release-unity::before,
+.release-functions::before, .release-javascript::before {
+  display: block;
+  float: left;
+  color: white;
+  width: 100px;
+  height: 32px;
+  margin-left: -110px;
+  margin-right: 10px;
+  margin-top: -5px;
+  padding-top: 4px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.release-changed::before {
+  content: "changed";
+  background-color: #F4B400;
+}
+
+.release-feature::before {
+  content: "feature";
+  background-color: #0F9D58;
+}
+
+.release-fixed::before {
+  content: "fixed";
+  background-color: #4285F4;
+}
+
+.release-issue::before {
+  content: "issue";
+  background-color: #DB4437;
+}
+
+.release-deprecated::before {
+  content: "deprecated";
+  background-color: #E65100;
+}
+
+.release-removed::before {
+  content: "removed";
+  background-color: #546E7A;
+}
+
+.release-unchanged::before {
+  content: "no change";
+  background-color: #CCCCCC;
+}
+
+.release-android::before {
+  content: "android";
+  background-color: #A4C639;
+}
+
+.release-android-bom::before {
+  content: "android bom";
+  background-color: #A4C639;
+}
+
+.release-ios::before {
+  text-transform: none;
+  content: "iOS";
+  background-color: #007aff;
+}
+
+.release-admin::before {
+  content: "admin";
+  background-color: #039BE5;
+}
+
+.release-cpp::before {
+  content: "c++";
+  background-color: #FF8A65;
+}
+
+.release-unity::before {
+  content: "unity";
+  background-color: #00cccc;
+}
+
+.release-functions::before {
+  content: "functions";
+  background-color: #2C384A;
+}
+
+.release-javascript::before {
+  content: "javascript";
+  background-color: #7e57c2;
+}
+
+.release-rules::before {
+  content: "rules";
+  background-color: #1B3A57;
+}
+
+/* End Changelog styles */
+
+
+/* Docs Overview page styles */
+
+.docs-android,
+.docs-ios,
+.docs-web,
+.docs-cpp,
+.docs-unity {
+  height: 64px;
+  width: 64px;
+  margin: 10px 16px 0 -16px;
+}
+
+.firebase-docs-overview .devsite-landing-row h2 {
+  margin: 80px 0 -40px;
+}
+
+.devsite-landing-row-3-up .docs-landing-row-item {
+    width: calc((100% - 80px)/2);
+    display: inline-block;
+}
+
+.docs-landing-icon {
+  font-size: 48px;
+  height: 48px;
+  margin: 11px;
+  width: 48px;
+}
+
+.firebase-reference-list {
+  display: -ms-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+.firebase-reference-list-item {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  margin: 40px 0 0;
+  padding: 0;
+}
+
+.firebase-reference-list-item > a {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flex;
+  display: flex;
+}
+
+.firebase-reference-list-item > a:not(:hover) h3 {
+  color: #424242;
+}
+
+.firebase-reference-list-item > a:not(:hover) li,
+.firebase-reference-list-item > a:not(:hover) p {
+  color: #757575;
+}
+
+.firebase-reference-list-item .docs-landing-icon {
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  -ms-flex: 0 0 88px;
+  flex: 0 0 88px;
+  height: 88px;
+  -ms-justify-content: center;
+  justify-content: center;
+  margin: 0 16px 0 0;
+  padding: 20px;
+}
+
+.firebase-reference-list-item h3 {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.firebase-reference-list-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.docs-android,
+.docs-ios,
+.docs-web,
+.docs-cpp,
+.docs-unity {
+  height: 88px;
+  width: auto;
+}
+
+.firebase-reference-list-item.docs-android .docs-landing-icon {
+  color: #00bfa5;
+}
+
+.firebase-reference-list-item.docs-cpp .docs-landing-icon {
+  color: #fd8c09;
+}
+
+.firebase-reference-list-item.docs-ios .docs-landing-icon {
+  color: #16aaca;
+}
+
+.firebase-reference-list-item.docs-unity .docs-landing-icon {
+  color: #000000;
+}
+
+.firebase-reference-list-item.docs-web .docs-landing-icon {
+  color: #c52062;
+}
+
+.firebase-reference-list-item.docs-http .docs-landing-icon {
+  color: #3F51B5;
+}
+
+@media (max-width: 1000px) {
+  .firebase-reference-list {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+/* end Docs Overview page styles */
+
+/* Full-page platform selector for Crashlytics docs */
+/* Note: h3 in selector content must include hide-from-toc */
+
+.full-page-selector, .full-page-selector-content {
+  border: none;
+  font-size: inherit;
+}
+
+.full-page-selector > .kd-buttonbar {
+  margin: 32px 0px;
+}
+
+.full-page-selector > section {
+  display: none;
+}
+
+.full-page-selector-content > .selected {
+  padding: 0;
+  font-size: inherit;
+}
+
+.full-page-selector-content > .kd-buttonbar {
+  display: none;
+}
+
+.select-page {
+  display: none;
+}
+
+.select-page + .ds-selector-tabs,
+.after-selection ~ .ds-selector-tabs {
+  border: none;
+  font-size: inherit;
+}
+
+.select-page + .ds-selector-tabs > .kd-buttonbar {
+  margin: 32px 0px;
+}
+
+.select-page + .ds-selector-tabs > section {
+  display: none;
+}
+
+.after-selection ~ .ds-selector-tabs > .selected {
+  padding: 0;
+  font-size: inherit;
+}
+
+.after-selection ~ .ds-selector-tabs > section p {
+  line-height: 24px;
+}
+
+.after-selection ~ .ds-selector-tabs > .kd-buttonbar {
+  display: none;
+}
+
+/* End full-page platform selector */
+
+/* Custom beta and alpha indicators (v1 format, followed by v2 format) */
+
+.devsite-nav-alpha .devsite-nav-icon::before,
+.devsite-nav-icon[data-icon="alpha"]::before {
+  content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTMuMjA2IDE1YTU0LjIxNCA1NC4yMTQgMCAwIDEtLjkyLTIuNTc4bC0uMTQtLjQxNGE4MS43NiA4MS43NiAwIDAgMC0uMTM2LS40MDJDMTAuODUgMTMuNjcyIDkuNTYyIDE0LjUgNy41IDE0LjUgNC44MSAxNC41IDMgMTIuNjE2IDMgOXMxLjgxLTUuNSA0LjUtNS41YzIuMDYyIDAgMy4zNS44MjggNC41MSAyLjg5NGwuMTM3LS40MDIuMTM5LS40MTRjLjM4LTEuMTI3LjY1My0xLjkwMi45Mi0yLjU3OGgyLjE2NmMtLjM2NC44My0uNjcyIDEuNjgtMS4xOSAzLjIxN2wtLjE0LjQxM0E1Ny45OSA1Ny45OSAwIDAgMSAxMy4xOTQgOWMuMjc1LjcxLjU1NCAxLjQ5OC44NDggMi4zN2wuMTQuNDEzYy41MTggMS41MzguODI2IDIuMzg3IDEuMTkgMy4yMTdoLTIuMTY2ek03LjUgNS41QzUuOTMyIDUuNSA1IDYuNDcgNSA5YzAgMi41My45MzIgMy41IDIuNSAzLjUgMS40OTcgMCAyLjQ0NC0uOTE3IDMuNTM1LTMuNUM5Ljk0NCA2LjQxNyA4Ljk5NyA1LjUgNy41IDUuNXoiIGZpbGw9InJnYmEoMCwwLDAsLjM4KSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+');
+}
+
+.devsite-nav-beta .devsite-nav-icon::before,
+.devsite-nav-icon[data-icon="beta"]::before {
+  content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIuMjM2IDcuNjgzQTQgNCAwIDAgMSAxMCAxNUg3djJINVY0YTIgMiAwIDAgMSAyLTJoMi41YTMuNSAzLjUgMCAwIDEgMi43MzYgNS42ODN6TTcgMTNoM2EyIDIgMCAxIDAgMC00SDd2NHptMC02aDIuNWExLjUgMS41IDAgMCAwIDAtM0g3djN6IiBmaWxsPSJyZ2JhKDAsMCwwLC4zOCkiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==');
+}
+
+
+.firebase-platform-label {
+ font: 500 12px/24px Roboto,sans-serif;
+}
+/* Full-page platform selector dropdown */
+/* Note: use menu variables in _elements.html file */
+
+.full-page-selector-dropdown {
+  border: none;
+  position: relative;
+  float: left;
+  display: inline-block;
+}
+
+.full-page-selector-dropdown > .ds-selector-tabs {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.full-page-selector-dropdown:hover .ds-selector-tabs {
+    display: block;
+    margin: 0;
+}
+
+.full-page-selector-dropdown:hover .kd-tabbutton {
+    display: block;
+    border: none;
+    height: inherit;
+    text-align: left;
+}
+
+.full-page-selector-dropdown:hover .kd-buttonbar {
+    border: none;
+    height: inherit;
+}
+
+.full-page-selector-dropdown h3:hover {
+    color: white;
+    background-color: #039be5;
+}
+
+.full-page-selector-dropdown:hover .devsite-overflow-menu-button {
+    display: none;
+}
+
+      </style>
+  
+  
+    <div class="devsite-banner devsite-banner-announcement"
+         >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <style>
+  .devsite-banner-announcement {
+    background: #e1f3fc;
+    color: #0288d1;
+    font-weight: 500;
+  }
+  .devsite-banner-announcement a {
+    color: #0288d1;
+    font-weight: 700;
+  }
+  .devsite-banner-announcement a:link,
+  .devsite-banner-announcement a:visited {
+    background: 0;
+  }
+  .devsite-banner-announcement a:hover,
+  .devsite-banner-announcement a:focus {
+    text-decoration: none;
+  }
+  .devsite-banner-announcement .devsite-banner-message-text {
+    margin: 0 auto;
+  }
+</style> Check out what’s new from Firebase@ Google I/O 2021, and join our <a href="https://services.google.com/fb/forms/firebasealphaprogram/" target="_blank" rel="noopener noreferrer">alpha program</a> for early access to the new Remote Config personalization feature. <a href="https://firebase.googleblog.com/2021/05/whats-new-from-firebase-at-google-io.html" target="_blank" rel="noopener noreferrer">Learn more</a>
+
+        </div>
+      </div>
+    </div>
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://firebase.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Firebase"
+      
+    >
+    
+        Firebase
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://firebase.google.com/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://firebase.google.com/docs/release"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Release &amp; Monitor
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+       <template class="thumb-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+       <template class="thumb-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+       
+         
+         
+         <template class="thumb-rating-feedback">
+         <devsite-feedback
+  position="thumb-rating"
+  project-name="Firebase"
+  product-id="719752"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20210601-r02-rc00.435605028023836298"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  
+  
+    project-feedback-url="https://firebase.google.com/support/contact/bugs-features/"
+  
+  
+    
+      project-icon="https://firebase.google.com/_static/firebase/images/logo.png"
+    
+  
+  
+    project-support-url="https://firebase.google.com/support/"
+  
+  feedback-type="thumb-rating">
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+         </template>
+       
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Firebase"
+  product-id="719752"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20210601-r02-rc00.435605028023836298"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  
+  
+    project-feedback-url="https://firebase.google.com/support/contact/bugs-features/"
+  
+  
+    
+      project-icon="https://firebase.google.com/_static/firebase/images/logo.png"
+    
+  
+  
+    project-support-url="https://firebase.google.com/support/"
+  
+  feedback-type="thumb-rating">
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+  
+    <h1 class="devsite-page-title">Upgrade to the Firebase Crashlytics SDK</h1>
+  
+
+  <devsite-toc class="devsite-nav" devsite-toc-embedded
+               >
+  </devsite-toc>
+
+  
+
+  <div class="devsite-article-body clearfix
+    ">
+
+    
+      
+
+    
+    
+  
+
+<p><devsite-nav-buttons name="platform">
+  <button value="ios" default>iOS</button>
+  <button value="android">Android</button>
+  <button value="unity">Unity</button>
+</devsite-nav-buttons></p>
+<aside class="note"><strong>Note:</strong><span> The Fabric SDK is no longer supported as of November 15, 2020.
+To continue getting crash reports in the Firebase console, make
+sure you upgrade to the Firebase Crashlytics SDK versions
+<strong>17.0.0+ for Android</strong>, <strong>4.0.0+ for iOS</strong>, or <strong>6.15.0+ for Unity</strong>.</span></aside>
+<p>You can now set up Crashlytics in your app by using the new official
+Firebase Crashlytics SDK, which offers improved APIs
+that are more consistent with other Firebase products and more intuitive to use.
+This guide describes how to upgrade to the new SDK from the legacy Fabric SDK.
+It describes the changes that come with the new APIs, the reason for the
+changes, and how to update your code, if required.</p>
+
+
+
+
+
+
+
+
+
+<h2 id="add-config-file" data-text="Step 1: Add a Firebase configuration file">Step 1: Add a Firebase configuration file</h2>
+
+
+
+
+
+<ol>
+<li>Open your <a href="https://console.firebase.google.com/project/_/settings/general">Project Settings.</a>
+In the <strong>Your apps</strong> card, select the bundle ID of the app for which you
+need a config file.</li>
+<li><p>Click <strong>Download GoogleService-Info.plist</strong> to obtain your Firebase iOS
+config file (<code translate="no" dir="ltr">GoogleService-Info.plist</code>).</p>
+
+<ul>
+<li><p>You can download your
+<a href="http://support.google.com/firebase/answer/7015592">Firebase iOS config file</a>
+again at any time.</p></li>
+<li><p>Make sure the config filename is not appended with additional
+characters, like <code translate="no" dir="ltr">(2)</code>.</p></li>
+</ul></li>
+<li><p>Move your config file into the root of your Xcode project. If prompted,
+select to add the config file to all targets.</p></li>
+</ol>
+
+<p>If you have multiple bundle IDs in your project, you must associate each bundle
+ID with a registered app in the Firebase console so that each app can have
+its own <code translate="no" dir="ltr">GoogleService-Info.plist</code> file.</p>
+<aside class="note"><strong>Note:</strong><span> The Firebase config file contains unique, but non-secret identifiers for
+your project. <br>Visit
+<a href="/docs/projects/learn-more#config-files-objects">Understand Firebase Projects</a>
+to learn more about this config file.</span></aside>
+
+
+
+
+<h2 id="add-crashlytics-sdk" data-text="Step 2: Add the Firebase Crashlytics SDK">Step 2: Add the Firebase Crashlytics SDK</h2>
+
+
+
+<ol>
+<li><p>In Cocoapods, replace the <code translate="no" dir="ltr">Fabric</code> and <code translate="no" dir="ltr">Crashlytics</code> pods with a
+<code translate="no" dir="ltr">Firebase/Crashlytics</code> pod in all targets. Make sure you add Version
+4.0.0 or later (this is required for your crash reports to appear in the
+Firebase console).</p>
+
+<div><aside class="note"><b>Recommended:</b> For an optimal experience with
+Firebase Crashlytics, we recommend also adding the Firebase SDK for
+Google Analytics to your app (make sure to add version 6.3.1 or later
+in order to get real time crash-free users and breadcrumbs).</aside></div>
+
+<pre class="prettyprint" translate="no" dir="ltr">
+# Add the pod for Firebase Crashlytics
+pod 'Firebase/Crashlytics'<br>
+# Recommended: Add the Firebase pod for Google Analytics
+pod 'Firebase/Analytics'
+</pre></li>
+<li><p>Directly uninstall or remove third party dependencies from Fabric, such as
+dependencies from Fabric Answers and third party kits.</p></li>
+<li><p>Install and update the pods, then open your .xcworkspace file to see the
+project in Xcode:</p>
+
+<pre class="devsite-terminal" translate="no" dir="ltr">pod install</pre>
+
+<pre class="devsite-terminal" translate="no" dir="ltr">open <var translate="no">your-project</var>.xcworkspace</pre></li>
+</ol>
+
+
+
+<h2 id="update-code" data-text="Step 3: Update your code">Step 3: Update your code</h2>
+
+
+
+<ol>
+<li><p>In Xcode, rebuild your app, then re-open your .xcworkspace file again.</p></li>
+<li><p>Review the following SDK changes and make the appropriate updates to
+your code:</p></li>
+</ol>
+
+<hr>
+
+<h3 id="now_rotates_ids_based_on" class="hide-from-toc" data-text="Crashlytics now rotates IDs based on Firebase installation IDs."><strong>Crashlytics now rotates IDs based on Firebase installation IDs.</strong></h3>
+
+<p>Crashlytics uses the Crashlytics Installation UUID to identify
+instances of your app and to associate your users&#39; data with their devices.
+Previously, Crashlytics rotated your user&#39;s Installation
+UUID when the advertising ID of their device changed. Now, Crashlytics
+rotates the Installation UUID based on the user&#39;s Firebase installation ID
+(FID). For more information, visit
+<a href="https://firebase.google.com/docs/projects/manage-installations">Manage Firebase installation IDs</a>.</p>
+
+<h3 id="reason_for_change_18" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>Using FIDs is consistent with other
+Firebase SDKs.</p>
+
+<hr>
+
+<h3 id="the_run_and_upload-symbols_scripts_are_now_in_firebasecrashlytics" class="hide-from-toc" data-text="The run and upload-symbols scripts are now in FirebaseCrashlytics."><strong>The run and upload-symbols scripts are now in FirebaseCrashlytics.</strong></h3>
+<aside class="note"><strong>Note:</strong><span> <code translate="no" dir="ltr">upload-symbols</code> is in the process of integrating with the rest of the
+Firebase CLI tools.</span></aside>
+<p>You can now access the <code translate="no" dir="ltr">run</code>
+and <code translate="no" dir="ltr">upload-symbols</code>
+scripts from the new
+<code translate="no" dir="ltr">FirebaseCrashlytics</code> library. Note that you can still call <code translate="no" dir="ltr">upload-symbols</code>
+from anywhere in your build process to manually upload your dSYMs.</p>
+
+<p>In addition, Fabric’s <var translate="no">API_KEY</var> and
+<var translate="no">BUILD_SECRET</var> are no longer included in the new SDK. Instead,
+Crashlytics now uses your app’s <code translate="no" dir="ltr">GoogleService-info.plist</code> to
+associate your app with your Firebase project and retain your historic crash
+data.</p>
+
+<h3 id="fabric_sdk_8" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+
+<pre class="prettyprint" translate="no" dir="ltr">
+${PODS_ROOT}/Fabric/run <var translate="no">API_KEY</var> <var translate="no">BUILD_SECRET</var>
+/path/to/pods/directory/Fabric/upload-symbols
+</pre>
+
+<h3 id="firebase-crashlytics-sdk_8" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+
+<pre class="prettyprint" translate="no" dir="ltr">
+${PODS_ROOT}/FirebaseCrashlytics/run
+/path/to/pods/directory/FirebaseCrashlytics/upload-symbols
+</pre>
+
+<h3 id="reason_for_change_19" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>Crashlytics no longer uses the Fabric SDK as a dependency so we&#39;re moving
+our CLI tools to a new library.</p>
+
+<hr>
+
+<h3 id="the_library_is_now_called_firebasecrashlytics" class="hide-from-toc" data-text="The Crashlytics library is now called FirebaseCrashlytics."><strong>The Crashlytics library is now called FirebaseCrashlytics.</strong></h3>
+
+<p>In your app, update your import paths:</p>
+
+<h3 id="fabric_sdk_9" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">import Crashlytics
+</code></pre></section>
+<section><h3 id="objective-c" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">@import Crashlytics
+</code></pre></section>
+</div>
+<h3 id="firebase-crashlytics-sdk_9" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_1" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">import FirebaseCrashlytics
+</code></pre></section>
+<section><h3 id="objective-c_1" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">@import FirebaseCrashlytics
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_20" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>Updating the name of the <code translate="no" dir="ltr">Crashlytics</code> library makes it consistent
+with other Firebase libraries (e.g., <code translate="no" dir="ltr">FirebaseFirestore</code> and
+<code translate="no" dir="ltr">FirebaseAuth</code>).</p>
+
+<hr>
+
+<h3 id="firebasecrashlytics_no_longer_works_with_the_fabric_sdk" class="hide-from-toc" data-text="FirebaseCrashlytics no longer works with the Fabric SDK."><strong>FirebaseCrashlytics no longer works with the Fabric SDK.</strong></h3>
+
+<p>Now, <code translate="no" dir="ltr">FirebaseCrashlytics</code> can only be initialized with the
+Firebase Crashlytics SDK. You can start up an instance of
+<code translate="no" dir="ltr">FirebaseCrashlytics</code> by calling
+<code translate="no" dir="ltr">FirebaseApp.configure</code> in Swift or <code translate="no" dir="ltr">[FIRApp configure]</code> in Objective-C.</p>
+
+<p>Within your <code translate="no" dir="ltr">application:didFinishLaunchingWithOptions</code>, replace calls to
+<code translate="no" dir="ltr">Fabric.with</code> and <code translate="no" dir="ltr">startWithAPIKey</code> with a call to <code translate="no" dir="ltr">FirebaseApp</code>:</p>
+
+<h3 id="fabric_sdk_10" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_2" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">Fabric.with([Crashlytics.self])
+</code></pre></section>
+<section><h3 id="objective-c_2" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[Fabric with:@[[Crashlytics class]]];
++ startWithAPIKey:
++ startWithAPIKey:delegate:
+</code></pre></section>
+</div>
+<h3 id="firebase-crashlytics-sdk_10" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_3" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">FirebaseApp.configure()
+</code></pre></section>
+<section><h3 id="objective-c_3" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[FIRApp configure];
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_21" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>Using the new methods to initialize Crashlytics
+is more consistent with how other Firebase services are initialized.</p>
+
+<hr>
+
+<h3 id="the_crash_and_throwexception_methods_are_removed" class="hide-from-toc" data-text="The crash and throwException methods are removed."><strong>The crash and throwException methods are removed.</strong></h3>
+
+<p>The new SDK no longer includes the <code translate="no" dir="ltr">crash</code> or
+<code translate="no" dir="ltr">throwException</code> methods. Instead, use <code translate="no" dir="ltr">fatalError</code> in Swift or an empty array
+in Objective-C to force a crash.</p>
+
+<h3 id="firebase-crashlytics-sdk_11" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_4" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">// Force a test crash
+fatalError()
+</code></pre></section>
+<section><h3 id="objective-c_4" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">// Force a test crash
+@[][1];
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_22" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>Different kinds of crashes can occur for a variety of reasons, and
+these methods did not clearly specify whether the resulting crashes occurred
+during runtime or in your app&#39;s native SDK.</p>
+
+<hr>
+
+<h3 id="the_sharedinstance_method_is_now_named_crashlytics" class="hide-from-toc" data-text="The sharedInstance method is now named crashlytics."><strong>The sharedInstance method is now named crashlytics.</strong></h3>
+
+<p>The new SDK no longer includes the <code translate="no" dir="ltr">sharedInstance</code> method.
+To initialize Crashlytics, use <code translate="no" dir="ltr">crashlytics</code> instead
+(read the reference documentation for
+<a href="/docs/reference/swift/firebasecrashlytics/api/reference/Classes">Swift</a>
+or <a href="/docs/reference/ios/firebasecrashlytics/api/reference/Classes">Objective-C</a>
+for more information). In your app’s delegate, update your initialization
+script:</p>
+
+<h3 id="fabric_sdk_11" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_5" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">Crashlytics.sharedInstance()
+</code></pre></section>
+<section><h3 id="objective-c_5" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[Crashlytics sharedInstance];
+</code></pre></section>
+</div>
+<h3 id="firebase-crashlytics-sdk_12" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_6" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">Crashlytics.crashlytics()
+</code></pre></section>
+<section><h3 id="objective-c_6" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[FIRCrashlytics crashlytics];
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_23" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>We named renamed the instance getter method to be
+consistent with other Firebase SDKs.</p>
+
+<hr>
+
+<h3 id="setuseridentifier_is_now_setuserid_setusername_and_setuseremail_are_removed" class="hide-from-toc" data-text="setUserIdentifier is now setUserID. setUserName and setUserEmail are removed."><strong>setUserIdentifier is now setUserID. setUserName and setUserEmail are removed.</strong></h3>
+
+<p>Previously, you could set a name or email associated with a
+crash using <code translate="no" dir="ltr">setUserName</code> and <code translate="no" dir="ltr">setUserEmail</code>,
+but these methods will no longer be defined.
+The new preferred method to
+<a href="/docs/crashlytics/customize-crash-reports#set-user-ids">set IDs for your users</a>
+is to use <code translate="no" dir="ltr">setUserID</code>.</p>
+
+<h3 id="fabric_sdk_12" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_7" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">Crashlytics.sharedInstance().setUserIdentifier(&#34;user_id&#34;)
+
+Crashlytics.sharedInstance().setUserEmail(&#34;user_email&#34;)
+
+Crashlytics.sharedInstance().setUserName(&#34;user_name&#34;)
+</code></pre></section>
+<section><h3 id="objective-c_7" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[[Crashlytics sharedInstance] setUserIdentifier:@&#34;user_id&#34;];
+
+[[Crashlytics sharedInstance] setUserEmail:@&#34;user_email&#34;];
+
+[[Crashlytics sharedInstance] setUserName:@&#34;user_name&#34;];
+</code></pre></section>
+</div>
+<h3 id="firebase-crashlytics-sdk_13" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_8" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">Crashlytics.crashlytics().setUserID(&#34;user_id&#34;)
+</code></pre></section>
+<section><h3 id="objective-c_8" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[[FIRCrashlytics crashlytics] setUserID:@&#34;user_id&#34;];
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_24" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>We adopted the method name <code translate="no" dir="ltr">setUserID</code> to be consistent with other Firebase APIs
+and removed <code translate="no" dir="ltr">setUserName</code> and <code translate="no" dir="ltr">setUserEmail</code> to discourage logging
+PII through Crashlytics.</p>
+
+<hr>
+
+<h3 id="clslogv_and_clsnslogv_are_replaced_by_logging_functions" class="hide-from-toc" data-text="CLSLogv and CLSNSLogv are replaced by logging functions."><strong>CLSLogv and CLSNSLogv are replaced by logging functions.</strong></h3>
+
+<p>The new SDK no longer includes the <code translate="no" dir="ltr">CLSLogv</code> or
+<code translate="no" dir="ltr">CLSNSLogv</code> functions. To <a href="/docs/crashlytics/customize-crash-reports#add-logs">add custom log messages</a>,
+use the new logging methods in the <code translate="no" dir="ltr">Crashlytics</code> library.
+Note that the new methods no longer print to <code translate="no" dir="ltr">stdout</code> or
+<code translate="no" dir="ltr">NSLog</code> (we recommend writing a wrapper if you want to
+keep this behavior).</p>
+
+<h3 id="fabric_sdk_13" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_9" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">CLSLogv(&#34;%@, %@&#34;, getVaList([first_arg, second_arg]))
+
+CLSNSLogv(&#34;%@, %@&#34;, getVaList([first_arg, second_arg]))
+</code></pre></section>
+<section><h3 id="objective-c_9" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">CLSLog(@&#34;%@, %@&#34;, first_arg, second_arg);
+CLSNSLog(@&#34;%@, %@&#34;, first_arg, second_arg);
+
+CLSLogv(@&#34;%@, %@&#34;, args_va_list);
+CLSNSLogv(@&#34;%@, %@&#34;, args_va_list);
+
+CLS_LOG(@&#34;%@, %@&#34;, first_arg, second_arg);
+</code></pre></section>
+</div>
+<h3 id="firebase-crashlytics-sdk_14" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_10" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">Crashlytics.crashlytics().log(&#34;\(first_arg), \(second_arg)&#34;)
+
+Crashlytics.crashlytics().log(format: &#34;%@, %@&#34;, arguments: getVaList([first_arg, second_arg]))
+</code></pre></section>
+<section><h3 id="objective-c_10" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[[FIRCrashlytics crashlytics] log:@&#34;first_arg, second_arg&#34;];
+
+[[FIRCrashlytics crashlytics] logWithFormat:@&#34;%@, %@&#34;, first_arg, second_arg];
+</code></pre></section>
+</div>
+<p>If you used <code translate="no" dir="ltr">CLS_LOG</code>, add the following to a header file to continue getting
+file names and line numbers in log statements:</p>
+
+<pre class="prettyprint" translate="no" dir="ltr">
+#define CLS_LOG(__FORMAT__, ...) [[FIRCrashlytics crashlytics] logWithFormat:@"%s line %d $ " __FORMAT__, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]
+</pre>
+
+<h3 id="reason_for_change_25" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>The new methods require instances, which makes it easier to test code.</p>
+
+<hr>
+
+<h3 id="setcustomvalue_is_replacing_setobjectvalue_setintvalue_setfloatvalue_and_setboolvalue" class="hide-from-toc" data-text="setCustomValue is replacing setObjectValue, setIntValue, setFloatValue, and setBoolValue."><strong>setCustomValue is replacing setObjectValue, setIntValue, setFloatValue, and setBoolValue.</strong></h3>
+
+<p>The custom setter methods are no longer included in the new SDK.
+Previously, you could use the methods to
+<a href="/docs/crashlytics/customize-crash-reports#add-keys">set key/value pairs</a>
+to send along with your crash report. Now, you can use <code translate="no" dir="ltr">setCustomValue:forKey</code>
+to set key/value pairs for all data types.</p>
+
+<h3 id="fabric_sdk_14" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_11" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">Crashlytics.sharedInstance().setObjectValue(&#34;value&#34;, forKey: &#34;object_key&#34;)
+
+Crashlytics.sharedInstance().setIntValue(100, forKey: &#34;int_key&#34;)
+
+Crashlytics.sharedInstance().setFloatValue(99.9, forKey: &#34;float_key&#34;)
+
+Crashlytics.sharedInstance().setBoolValue(true, forKey: &#34;bool_key&#34;)
+</code></pre></section>
+<section><h3 id="objective-c_11" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[[Crashlytics sharedInstance] setObjectValue:@&#34;key&#34; forKey:@&#34;object_key&#34;];
+
+[[Crashlytics sharedInstance] setIntValue:100 forKey:@&#34;int_key&#34;];
+
+[[Crashlytics sharedInstance] setFloatValue:99.9 forKey:@&#34;float_key&#34;];
+
+[[Crashlytics sharedInstance] setBoolValue:YES forKey:@&#34;bool_key&#34;];
+</code></pre></section>
+</div>
+<h3 id="firebase-crashlytics-sdk_15" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_12" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">Crashlytics.crashlytics().setCustomValue(&#34;value&#34;, forKey: &#34;object_key&#34;)
+
+Crashlytics.crashlytics().setCustomValue(100, forKey: &#34;int_key&#34;)
+
+Crashlytics.crashlytics().setCustomValue(99.9, forKey: &#34;float_key&#34;)
+
+Crashlytics.crashlytics().setCustomValue(true, forKey: &#34;bool_key&#34;)
+</code></pre></section>
+<section><h3 id="objective-c_12" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">[[FIRCrashlytics crashlytics] setCustomValue:@&#34;value&#34; forKey:@&#34;object_key&#34;];
+
+[[FIRCrashlytics crashlytics] setCustomValue:@(100) forKey:@&#34;int_key&#34;];
+
+[[FIRCrashlytics crashlytics] setCustomValue:@(99.9) forKey:@&#34;float_key&#34;];
+
+[[FIRCrashlytics crashlytics] setCustomValue:@YES forKey:@&#34;bool_key&#34;];
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_26" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>The new method name is unique to Crashlytics and makes it
+clear that Crashlytics is not key-value compliant.</p>
+
+<hr>
+
+<h3 id="recordcustomexceptionnamereasonframearray_is_replaced_by_the" class="hide-from-toc" data-text="recordCustomExceptionName:reason:frameArray: is replaced by the Exception Model API."><strong>recordCustomExceptionName:reason:frameArray: is replaced by the Exception Model API.</strong></h3>
+
+<p>If your app runs in a non-native environment (e.g., JavaScript or Unity), you
+can use the Exception Model API to report crash metadata in your app&#39;s native
+exception format.</p>
+
+<h3 id="fabric_sdk_15" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_13" data-text="Swift">Swift</h3><p>
+    let topFrame = CLSStackFrame()
+    topFrame.symbol = &quot;doSomethingBad&quot;
+    topFrame.fileName = &quot;bad.cc&quot;
+    topFrame.lineNumber = 23</p>
+<pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">let middleFrame = CLSStackFrame()
+middleFrame.symbol = &#34;doOtherStuff&#34;
+middleFrame.fileName = &#34;stuff.cc&#34;
+middleFrame.lineNumber = 23;
+
+let bottomFrame = CLSStackFrame()
+bottomFrame.symbol = &#34;main&#34;
+bottomFrame.fileName = &#34;main.cc&#34;
+bottomFrame.lineNumber = 123
+
+Crashlytics.sharedInstance().recordCustomExceptionName(&#34;FooException&#34;,
+                                                       reason: &#34;There was a foo.&#34;,
+                                                       frameArray: [topFrame, middleFrame, bottomFrame])
+</code></pre></section>
+<section><h3 id="objective-c_13" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">CLSStackFrame *topFrame = [[CLSStackFrame alloc] init];
+topFrame.symbol = @&#34;doSomethingBad&#34;;
+topFrame.fileName = @&#34;bad.cc&#34;;
+topFrame.lineNumber = 23;
+
+CLSStackFrame *middleFrame = [[CLSStackFrame alloc] init];
+middleFrame.symbol = @&#34;doOtherStuff&#34;;
+middleFrame.fileName = @&#34;stuff.cc&#34;;
+middleFrame.lineNumber = 23;
+
+CLSStackFrame *bottomFrame = [[CLSStackFrame alloc] init];
+bottomFrame.symbol = @&#34;main&#34;;
+bottomFrame.fileName = @&#34;main.cc&#34;;
+bottomFrame.lineNumber = 123;
+
+[[Crashlytics sharedInstance] recordCustomExceptionName:@&#34;FooException&#34;
+                                                 reason:@&#34;There was a foo.&#34;
+                                             frameArray:@[topFrame, middleFrame, bottomFrame]];
+</code></pre></section>
+</div>
+<h3 id="firebase-crashlytics-sdk_16" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_14" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">var  ex = ExceptionModel.init(name:&#34;FooException&#34;, reason:&#34;There was a foo.&#34;)
+ex.stackTrace = [
+  StackFrame.init(symbol:&#34;makeError&#34; fileName:&#34;handler.js&#34; lineNumber:495),
+  StackFrame.init(symbol:&#34;then&#34; fileName:&#34;routes.js&#34; lineNumber:102),
+  StackFrame.init(symbol:&#34;main&#34; fileName:&#34;app.js&#34; lineNumber:12),
+]
+
+crashlytics.record(exceptionModel:ex)
+</code></pre></section>
+<section><h3 id="objective-c_14" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">model.stackTrace = @[
+  [FIRStackFrame stackFrameWithSymbol:@&#34;makeError&#34; fileName:@&#34;handler.js&#34; lineNumber:495],
+  [FIRStackFrame stackFrameWithSymbol:@&#34;then&#34; fileName:@&#34;routes.js&#34; lineNumber:102],
+  [FIRStackFrame stackFrameWithSymbol:@&#34;main&#34; fileName:@&#34;app.js&#34; lineNumber:12],
+];
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_27" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>This feature has been long requested and allows you to extend Crashlytics
+onto other platforms like Unity, Flutter, or React Native.</p>
+
+<p><br>
+<hr></p>
+
+<h3 id="the_crashlyticsdelegate_is_replaced_by_separate_methods_for_handling_crash_reports" class="hide-from-toc" data-text="The CrashlyticsDelegate is replaced by separate methods for handling crash reports."><strong>The CrashlyticsDelegate is replaced by separate methods for handling crash reports.</strong></h3>
+
+<p>You can now use a new set of methods for handling crash reports:</p>
+
+<ul>
+<li><p><code translate="no" dir="ltr">didFinishLaunchingWithOptions</code> is now replaced by the new handler
+<code translate="no" dir="ltr">checkForUnsentReportsWithCompletion</code>.</p></li>
+<li><p><code translate="no" dir="ltr">crashlyticsDidDetectReportForLastExecution</code> is now replaced by <code translate="no" dir="ltr">didCrashDuringPreviousExecution</code>.
+<code translate="no" dir="ltr">didCrashDuringPreviousExecution</code> allows you to conveniently
+detect crashes that occur during the last run of your app.</p></li>
+<li><p><code translate="no" dir="ltr">crashlyticsCanUseBackgroundSessions</code> is now permanently set to true.</p></li>
+<li><p>We no longer support inspecting the <code translate="no" dir="ltr">CLSReport</code> object in the delegate.</p></li>
+</ul>
+
+<p>By default, Crashlytics
+automatically uploads crash reports at startup, and you could previously call
+<code translate="no" dir="ltr">didFinishLaunchingWithOptions</code> to let your users
+<a href="/docs/crashlytics/customize-crash-reports#enable-reporting">opt-in to crash reporting.</a>
+Now, when you call <code translate="no" dir="ltr">setCrashlyticsCollectionEnabled=false</code>
+to turn off automatic crash reporting, Crashlytics calls
+<code translate="no" dir="ltr">checkForUnsentReportsWithCompletion</code>, which lets your users choose whether or not
+to send crash reports when your app crashes. You can then call
+<code translate="no" dir="ltr">sendUnsentReports</code> if the user opts in or <code translate="no" dir="ltr">deleteUnsentReports</code> if the user opts out.</p>
+
+<p>Note that you can also call <code translate="no" dir="ltr">sendUnsentReports</code> and
+<code translate="no" dir="ltr">deleteUnsentReports</code> outside of
+<code translate="no" dir="ltr">checkForUnsentReportsWithCompletion</code>. For example, you may
+want to permanently set up or disable crash reporting if your users have
+given you blanket approval or disapproval to send crash reports. Keep in
+mind that you may never receive crash reports if your app crashes early
+on in its lifecycle.</p>
+
+<h3 id="fabric_sdk_16" class="hide-from-toc" data-text="Fabric SDK">Fabric SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_15" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">class YourClassName: CrashlyticsDelegate {
+
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions
+
+    ...
+    Crashlytics.sharedInstance().delegate = self
+    ...
+
+    return true
+  }
+
+  func crashlyticsDidDetectReport(forLastExecution report: CLSReport, completionHandler: @escaping (Bool) -&gt; Void) {
+    /* ... handle unsent reports */
+  }
+
+  func crashlyticsCanUseBackgroundSessions(_ crashlytics: Crashlytics) -&gt; Bool {
+    return true
+  }
+}
+</code></pre></section>
+<section><h3 id="objective-c_15" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">@interface YourClassName &amp;lt;CrashlyticsDelegate&amp;gt; ()
+@end
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+  ...
+  [[Crashlytics sharedInstance] setDelegate:self];
+  ...
+
+  return YES;
+}
+
+-(void)crashlyticsDidDetectReportForLastExecution:(CLSReport *)report completionHandler:(void (^)(BOOL submit))completionHandler {
+  // ... handle unsent reports
+}
+
+-(BOOL)crashlyticsCanUseBackgroundSessions:(Crashlytics *)crashlytics {
+  return YES;
+}
+
+@end
+</code></pre></section>
+</div>
+<h3 id="firebase-crashlytics-sdk_17" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_16" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">/* You must set setCrashlyticsCollectionEnabled to false in order to use
+checkForUnsentReportsWithCompletion. */
+
+Crashlytics.crashlytics().setCrashlyticsCollectionEnabled(false)
+
+Crashlytics.crashlytics().checkForUnsentReports { hasUnsentReport in
+  let hasUserConsent = false
+  // ...get user consent.
+
+  if hasUserConsent &amp;&amp; hasUnsentReport {
+    Crashlytics.crashlytics().sendUnsentReports()
+  } else {
+    Crashlytics.crashlytics().deleteUnsentReports()
+  }
+}
+
+// Detect when a crash happens during your app&#39;s last run.
+if Crashlytics.crashlytics().didCrashDuringPreviousExecution() {
+  // ...notify the user.
+}
+</code></pre></section>
+<section><h3 id="objective-c_16" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">/* You must set setCrashlyticsCollectionEnabled to false in order to use
+checkForUnsentReportsWithCompletion. */
+
+[[FIRCrashlytics crashlytics] setCrashlyticsCollectionEnabled:false];
+
+[[FIRCrashlytics crashlytics] checkForUnsentReportsWithCompletion:^(BOOL hasUnsentReports) {
+  BOOL hasConsent = false;
+  // ...get consent from user.
+
+  if (hasConsent &amp;&amp; hasUnsentReports) {
+    [[FIRCrashlytics crashlytics] sendUnsentReports];
+  } else {
+    [[FIRCrashlytics crashlytics] deleteUnsentReports];
+  }
+}];
+
+// Detect when a crash happens during your app&#39;s last run.
+if ([[FIRCrashlytics crashlytics] didCrashDuringPreviousExecution]) {
+  // ...notify the user.
+}
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_28" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>The new set of methods give you more control over your app&#39;s crash
+reporting behavior.
+Also, you no longer need to set up the CrashlyticsDelegate
+before initializing Crashlytics.</p>
+
+<hr>
+
+<h3 id="firebase_crashlytics_collection_enabled_is_replaced_by_firebasecrashlyticscollectionenabled" class="hide-from-toc" data-text="firebase_crashlytics_collection_enabled is replaced by FirebaseCrashlyticsCollectionEnabled."><strong>firebase_crashlytics_collection_enabled is replaced by FirebaseCrashlyticsCollectionEnabled.</strong></h3>
+
+<p>When you set <code translate="no" dir="ltr">FirebaseCrashlyticsCollectionEnabled</code> to false in your
+<code translate="no" dir="ltr">Info.plist</code>, Crashlytics stops automatically sending crash reports at
+startup. After your app&#39;s first run, you can also disable crash reporting by
+setting <code translate="no" dir="ltr">setCrashlyticsCollectionEnabled</code> to <code translate="no" dir="ltr">false</code> in your <code translate="no" dir="ltr">Crashlytics.h</code>,
+but note that <code translate="no" dir="ltr">setCrashlyticsCollectionEnabled</code> overrides this flag.</p>
+
+<p>Turn off automatic collection by replacing the
+<code translate="no" dir="ltr">firebase_crashlytics_collection_enabled</code> key in your <code translate="no" dir="ltr">Info.plist</code>:</p>
+
+<ul>
+<li><p>Key: <code translate="no" dir="ltr">FirebaseCrashlyticsCollectionEnabled</code></p></li>
+<li><p>Value: <code translate="no" dir="ltr">false</code></p></li>
+</ul>
+
+<p>After the first run of your app, you can also turn off automatic collection by
+adding the following to your <code translate="no" dir="ltr">Crashlytics.h</code>:</p>
+
+<h3 id="firebase-crashlytics-sdk_18" class="hide-from-toc" data-text="Firebase Crashlytics SDK">Firebase Crashlytics SDK</h3>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="swift_17" data-text="Swift">Swift</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">// setCrashlyticsCollectionEnabled is set to true by default.
+Crashlytics.crashlytics().setCrashlyticsCollectionEnabled(false)
+</code></pre></section>
+<section><h3 id="objective-c_17" data-text="Objective-C">Objective-C</h3><pre class="prettyprint" translate="no" dir="ltr"><code translate="no" dir="ltr">// setCrashlyticsCollectionEnabled is set to true by default.
+[[FIRCrashlytics crashlytics] setCrashlyticsCollectionEnabled:false];
+</code></pre></section>
+</div>
+<h3 id="reason_for_change_29" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>Now you have more control over how Crashlytics handles unsent crash
+reports when you disable automatic crash reporting. After you set
+<code translate="no" dir="ltr">FirebaseCrashlyticsCollectionEnabled</code> to false,
+you can call <code translate="no" dir="ltr">checkForUnsentReportsWithCompletion</code>
+from anywhere in your app and either send or delete unsent reports,
+depending on what your user chooses.</p>
+
+<hr>
+
+<h3 id="now_always_uses_background_sessions" class="hide-from-toc" data-text="Now, Crashlytics always uses background sessions."><strong>Now, Crashlytics always uses background sessions.</strong></h3>
+
+<p>Previously, you could turn off background sessions if you didn&#39;t want to
+support it in your
+app by setting <code translate="no" dir="ltr">crashlyticsCanUseBackgroundSessions</code> to false.
+Now, <code translate="no" dir="ltr">crashlyticsCanUseBackgroundSessions</code>
+is always set to true.</p>
+
+<h3 id="reason_for_change_30" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>We no longer support iOS versions below 7.0 or macOS versions below
+OS X 10.9, which do not support background sessions.</p>
+
+<hr>
+
+<h3 id="can_only_use_data_collected_by" class="hide-from-toc" data-text="Crashlytics can only use data collected by Google Analytics."><strong>Crashlytics can only use data collected by Google Analytics.</strong></h3>
+
+<p>You can no longer collect data with Fabric Answers after upgrading to the
+Firebase Crashlytics SDK. To get metrics for crash-free users and
+breadcrumbs, switch over to using Google Analytics instead. Note that your
+historical Answers data cannot migrate to Firebase.</p>
+
+<p>Visit <a href="/docs/crashlytics/start-using-analytics">Start using Google Analytics</a>
+to learn how to add Google Analytics to your app.</p>
+<aside class="note"><strong>Note:</strong><span> When you ship an app that has the
+Firebase Crashlytics SDK installed, Fabric Answers stops receiving
+data for that app. This applies to any later versions of the app as
+well.</span></aside>
+<h3 id="reason_for_change_31" class="hide-from-toc" data-text="Reason for change">Reason for change</h3>
+
+<p>We now offer Google Analytics to help you get more insight into your crash
+data. With Analytics, you can continue gathering stats for your app in the
+Firebase console.</p>
+
+
+
+<h2 id="next_steps" data-text="Next steps">Next steps</h2>
+
+
+
+<ul>
+<li><p>Test your Crashlytics setup by
+<a href="/docs/crashlytics/test-implementation">forcing a crash</a> in the
+Firebase console.</p></li>
+<li><p><a href="/docs/crashlytics/customize-crash-reports">Customize your crash report setup</a>
+by adding opt-in reporting, logs, keys, and tracking of non-fatal errors.</p></li>
+<li><p><a href="/docs/start-using-analytics">Add Google Analytics</a> to your app.
+Combine the power of Google Analytics with Firebase Crashlytics to
+see crash-free user statistics in the <a href="//console.firebase.google.com/"
+                                    class="link external gc-analytics-event"
+                                    data-category="console"
+                                    data-action="linkClick">Firebase console</a>.</p></li>
+</ul>
+
+
+
+
+
+  
+    
+
+    
+  </div>
+
+  
+
+  
+    
+      
+    <devsite-thumb-rating position="footer">
+       <template class="thumb-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+       <template class="thumb-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+       
+         
+         
+         <template class="thumb-rating-feedback">
+         <devsite-feedback
+  position="thumb-rating"
+  project-name="Firebase"
+  product-id="719752"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20210601-r02-rc00.435605028023836298"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  
+  
+    project-feedback-url="https://firebase.google.com/support/contact/bugs-features/"
+  
+  
+    
+      project-icon="https://firebase.google.com/_static/firebase/images/logo.png"
+    
+  
+  
+    project-support-url="https://firebase.google.com/support/"
+  
+  feedback-type="thumb-rating">
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+         </template>
+       
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Firebase"
+  product-id="719752"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20210601-r02-rc00.435605028023836298"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  
+  
+    project-feedback-url="https://firebase.google.com/support/contact/bugs-features/"
+  
+  
+    
+      project-icon="https://firebase.google.com/_static/firebase/images/logo.png"
+    
+  
+  
+    project-support-url="https://firebase.google.com/support/"
+  
+  feedback-type="thumb-rating">
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2021-06-04 UTC.</p>
+</devsite-content-footer>
+
+
+
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Learn</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/docs/guides/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+          
+            Guides
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/docs/reference/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+          
+            Reference
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/docs/samples/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            Samples
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/docs/libraries/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+          
+            Libraries
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//github.com/firebase/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+          
+            GitHub
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Stay connected</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//firebase.googleblog.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+          
+            Blog
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/summit/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+          
+            Firebase Summit
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.facebook.com/Firebase/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            Facebook
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/Firebase"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+          
+            Twitter
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/user/Firebase"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+          
+            YouTube
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Support</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/support/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+          
+            Contact support
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//stackoverflow.com/questions/tagged/firebase"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+          
+            Stack Overflow
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//firebase.community/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            Slack community
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//groups.google.com/forum/#!forum/firebase-talk"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+          
+            Google group
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/support/releases"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+          
+            Release notes
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/support/faq/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+          
+            FAQs
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/images/lockup-developers.svg"
+           loading="lazy"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developers.google.com/products/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+
+    
+<devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    
+    <select aria-label="Select your language preference."
+            class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+    
+      
+      <option>Language</option>
+    
+    
+      <option value="en"
+              lang="en"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+    
+      <option value="id"
+              lang="id"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+    
+      <option value="de"
+              lang="de"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+    
+      <option value="es_419"
+              lang="es_419"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+    
+      <option value="fr"
+              lang="fr"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+    
+      <option value="it"
+              lang="it"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="it"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Italiano
+      </option>
+    
+      <option value="pl"
+              lang="pl"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="pl"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Polski
+      </option>
+    
+      <option value="pt_br"
+              lang="pt_br"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+    
+      <option value="vi"
+              lang="vi"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+    
+      <option value="tr"
+              lang="tr"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+    
+      <option value="ru"
+              lang="ru"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+    
+      <option value="he"
+              lang="he"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="he"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        עברית&#39;
+      </option>
+    
+      <option value="ar"
+              lang="ar"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ar"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        العربيّة
+      </option>
+    
+      <option value="fa"
+              lang="fa"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="fa"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        فارسی
+      </option>
+    
+      <option value="hi"
+              lang="hi"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="hi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        हिंदी
+      </option>
+    
+      <option value="bn"
+              lang="bn"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="bn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        বাংলা
+      </option>
+    
+      <option value="th"
+              lang="th"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+    
+      <option value="zh_cn"
+              lang="zh_cn"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+    
+      <option value="zh_tw"
+              lang="zh_tw"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+    
+      <option value="ja"
+              lang="ja"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+    
+      <option value="ko"
+              lang="ko"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+    
+    </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar 
+                  ></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics enable-analytics-iframe>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "Firebase", "scriptsafe": null, "signedIn": "False", "tenant": "firebase", "recommendations": {"sourcePage": "", "sourceType": 0, "sourceRank": 0, "sourceIdenticalDescriptions": 0, "sourceTitleWords": 0, "sourceDescriptionWords": 0, "experiment": ""}}, "tags": ["GTM-N84485"]}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    <firebase-gtm></firebase-gtm>
+    <script nonce="M1cXbPccXs4Jwa8MrXTw3SY4W66Ndp">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/js/app_loader.js', '[4,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase","https://firebase-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/firebase/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/vacc2a2a4a4394c7c42dc62dba69eb022d7680ce4a368d4b28c3e984cc9155a81/firebase/images/lockup.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,45,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,105,107,108,111,112,113,115,117,118,120,122,123,124,125,127,129,131,132,133,134,135,136,138,145],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg"]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>
